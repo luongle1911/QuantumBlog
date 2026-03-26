@@ -9,14 +9,14 @@ import remarkUnescapeMath from './src/plugins/remark-unescape-math.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
-  base: '/quantum-blog/',
+	site: 'https://luongle1911.github.io',
+	base: '/quantum-blog/',
 	integrations: [mdx(), sitemap()],
-  	markdown: {
+	markdown: {
 		remarkPlugins: [remarkMath, remarkUnescapeMath],
 		rehypePlugins: [rehypeKatex],
 		shikiConfig: {
-			theme: 'github-dark',
+			theme: 'github-light',
 		}
 	},
 });

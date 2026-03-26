@@ -1,79 +1,104 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<'co-hoc-luong-tu'>['data'] & {
-	posts?: Array<any>;
-	collectionRoute?: string;
+type Props = CollectionEntry<"co-hoc-luong-tu">["data"] & {
+    posts?: Array<any>;
+    collectionRoute?: string;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, tags, posts, collectionRoute } = Astro.props;
+const {
+    title,
+    description,
+    pubDate,
+    updatedDate,
+    heroImage,
+    tags,
+    posts,
+    collectionRoute,
+} = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				max-width: 100%;
-				height: auto;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--shadow);
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: var(--text-secondary);
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
+    <head>
+        <BaseHead title={title} description={description} />
+        <style>
+            .hero-image {
+                width: 100%;
+            }
+            .hero-image img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 12px;
+                box-shadow: var(--shadow);
+            }
+            .title {
+                margin-bottom: 1em;
+                padding: 1em 0;
+                text-align: center;
+                line-height: 1;
+            }
+            .title h1 {
+                margin: 0 0 0.5em 0;
+            }
+            .date {
+                margin-bottom: 0.5em;
+                color: var(--text-secondary);
+            }
+            .last-updated-on {
+                font-style: italic;
+            }
+        </style>
+    </head>
 
-	<body>
-		<Header />
-		
+    <body>
+        <Header />
+
         <div class="layout-wrapper container-wide">
-			{posts && posts.length > 0 && (
-				<aside class="sidebar left-sidebar">
-					<h3>Danh sách bài viết</h3>
-					<ul>
-						{posts.map(p => {
-                            const postSlug = p.id.replace(/\.[^/.]+$/, "");
-                            const isActive = Astro.url.pathname.includes(postSlug);
-                            return (
-							<li>
-                                <a href={`/quantum-blog/${collectionRoute}/${postSlug}/`} class={isActive ? "active" : ""}>
-                                    {p.data.title}
-                                </a>
-                            </li>
-						)})}
-					</ul>
-				</aside>
-			)}
+            {
+                posts && posts.length > 0 && (
+                    <aside class="sidebar left-sidebar">
+                        <h3>Danh sách bài viết</h3>
+                        <ul>
+                            {posts.map((p) => {
+                                const postSlug = p.id.replace(/\.[^/.]+$/, "");
+                                const isActive =
+                                    Astro.url.pathname.includes(postSlug);
+                                return (
+                                    <li>
+                                        <a
+                                            href={`/quantum-blog/${collectionRoute}/${postSlug}/`}
+                                            class={isActive ? "active" : ""}
+                                        >
+                                            {p.data.title}
+                                        </a>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </aside>
+                )
+            }
 
             <main class="content-body">
                 <article>
                     <div class="hero-image">
-                        {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+                        {
+                            heroImage && (
+                                <Image
+                                    width={1020}
+                                    height={510}
+                                    src={heroImage}
+                                    alt=""
+                                />
+                            )
+                        }
                     </div>
                     <div class="prose post-content">
                         <div class="title">
@@ -82,7 +107,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags, posts, collec
                                 {
                                     updatedDate && (
                                         <div class="last-updated-on">
-                                            Cập nhật lần cuối <FormattedDate date={updatedDate} />
+                                            Cập nhật lần cuối{" "}
+                                            <FormattedDate date={updatedDate} />
                                         </div>
                                     )
                                 }
@@ -91,77 +117,134 @@ const { title, description, pubDate, updatedDate, heroImage, tags, posts, collec
                             <hr />
                         </div>
                         <slot />
-                        {tags && tags.length > 0 && (
-                            <div class="tags-container" style="margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-                                <span style="font-weight: 600; color: var(--text-secondary); margin-right: 0.5rem; display: flex; align-items: center;">🏷️ Tags:</span>
-                                {tags.map((tag: string) => (
-                                    <span class="tag" style="background: var(--secondary); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 99px; font-size: 0.85rem; font-weight: 500;">#{tag}</span>
-                                ))}
-                            </div>
-                        )}
+                        {
+                            tags && tags.length > 0 && (
+                                <div
+                                    class="tags-container"
+                                    style="margin-top: 3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 1.5rem;"
+                                >
+                                    <span style="font-weight: 600; color: var(--text-secondary); margin-right: 0.5rem; display: flex; align-items: center;">
+                                        🏷️ Tags:
+                                    </span>
+                                    {tags.map((tag: string) => (
+                                        <span
+                                            class="tag"
+                                            style="background: var(--secondary); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 99px; font-size: 0.85rem; font-weight: 500;"
+                                        >
+                                            #{tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )
+                        }
                     </div>
-                    <div class="giscus-container glass-card" style="margin-top: 4rem; padding: 2rem;">
-                    <h3 class="comments-title" style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--primary);">Thảo luận Khoa học</h3>
-                    <div style="padding: 1rem; margin-bottom: 1rem; background-color: var(--secondary); border: 1px solid var(--primary); border-radius: 8px; color: var(--text-primary); font-size: 0.95rem;">
-                        <strong>Lưu ý:</strong> Tính năng bình luận Giscus hiện đang dùng cấu hình mẫu. Để hoạt động thực tế, bạn cần cấu hình <code>data-repo</code> trong file <code>src/layouts/BlogPost.astro</code>.
-                    </div>
-                    <div class="giscus"></div>
-                    <script src="https://giscus.app/client.js"
-                            data-repo="example/repo"
-                            data-repo-id="R_kgDOXXXXXX"
-                            data-category="General"
-                            data-category-id="DIC_kwDOXXXXXX"
+                    <div
+                        class="giscus-container glass-card"
+                        style="margin-top: 4rem; padding: 2rem;"
+                    >
+                        <h3
+                            class="comments-title"
+                            style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--primary);"
+                        >
+                            Thảo luận Khoa học
+                        </h3>
+                        <div
+                            style="padding: 1rem; margin-bottom: 1rem; background-color: var(--secondary); border: 1px solid var(--primary); border-radius: 8px; color: var(--text-primary); font-size: 0.95rem;"
+                        >
+                            <strong>Lưu ý:</strong> Tính năng bình luận Giscus hiện
+                            đang dùng cấu hình mẫu. Để hoạt động thực tế, bạn cần
+                            cấu hình <code>data-repo</code> trong file <code
+                                >src/layouts/BlogPost.astro</code
+                            >.
+                        </div>
+                        <div class="giscus"></div>
+                        <script
+                            src="https://giscus.app/client.js"
+                            data-repo="luongle1911/QuantumBlog"
+                            data-repo-id="R_kgDORxQZYg"
+                            data-category="Announcements"
+                            data-category-id="DIC_kwDORxQZYs4C5UYJ"
                             data-mapping="pathname"
                             data-strict="0"
                             data-reactions-enabled="1"
                             data-emit-metadata="0"
                             data-input-position="bottom"
                             data-theme="light"
-                            data-lang="vi"
+                            data-lang="en"
                             crossorigin="anonymous"
-                            async>
-                    </script>
+                            async
+                        ></script>
                     </div>
                 </article>
             </main>
 
-			<aside class="sidebar right-sidebar">
-				<h3>Khám Phá Thêm</h3>
-				<ul class="category-links" style="list-style: none; padding: 0;">
-					<li><a href="/quantum-blog/co-hoc-luong-tu/" style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.75rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;">⚛️ Cơ Học Lượng Tử</a></li>
-					<li><a href="/quantum-blog/dien-toan-luong-tu/" style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.5rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;">💻 Điện Toán Lượng Tử</a></li>
-				</ul>
-				
-				<h3 style="margin-top: 2.5rem;">Cộng Đồng</h3>
-				<a href="#" class="glass-card" style="display: flex; align-items: center; gap: 10px; padding: 1rem; text-decoration: none; border-color: #1877F2; background: #f0f7ff;">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
-						<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-					</svg>
-					<span style="font-weight: 600; color: #1877F2; font-size: 0.95rem;">Fanpage Lượng Tử</span>
-				</a>
-			</aside>
+            <aside class="sidebar right-sidebar">
+                <h3>Khám Phá Thêm</h3>
+                <ul
+                    class="category-links"
+                    style="list-style: none; padding: 0;"
+                >
+                    <li>
+                        <a
+                            href="/quantum-blog/co-hoc-luong-tu/"
+                            style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.75rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
+                            >⚛️ Cơ Học Lượng Tử</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/quantum-blog/dien-toan-luong-tu/"
+                            style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.5rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
+                            >💻 Điện Toán Lượng Tử</a>
+                    </li>
+                </ul>
+
+                <h3 style="margin-top: 2.5rem;">Cộng Đồng</h3>
+                <a
+                    href="#"
+                    class="glass-card"
+                    style="display: flex; align-items: center; gap: 10px; padding: 1rem; text-decoration: none; border-color: #1877F2; background: #f0f7ff;"
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="#1877F2"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                        ></path>
+                    </svg>
+                    <span
+                        style="font-weight: 600; color: #1877F2; font-size: 0.95rem;"
+                        >Fanpage Lượng Tử</span
+                    >
+                </a>
+            </aside>
         </div>
-		<Footer />
+        <Footer />
         <script>
-        document.querySelectorAll('.post-content pre').forEach((pre) => {
-          const button = document.createElement('button');
-          button.className = 'copy-code-btn';
-          button.innerText = 'Copy';
-          
-          const wrapper = document.createElement('div');
-          wrapper.className = 'code-wrapper';
-          
-          pre.parentNode.insertBefore(wrapper, pre);
-          wrapper.appendChild(pre);
-          wrapper.appendChild(button);
-          
-          button.addEventListener('click', async () => {
-            const code = pre.querySelector('code')?.innerText || '';
-            await navigator.clipboard.writeText(code);
-            button.innerText = 'Copied!';
-            setTimeout(() => { button.innerText = 'Copy'; }, 2000);
-          });
-        });
+            document.querySelectorAll(".post-content pre").forEach((pre) => {
+                const button = document.createElement("button");
+                button.className = "copy-code-btn";
+                button.innerText = "Copy";
+
+                const wrapper = document.createElement("div");
+                wrapper.className = "code-wrapper";
+
+                pre.parentNode.insertBefore(wrapper, pre);
+                wrapper.appendChild(pre);
+                wrapper.appendChild(button);
+
+                button.addEventListener("click", async () => {
+                    const code = pre.querySelector("code")?.innerText || "";
+                    await navigator.clipboard.writeText(code);
+                    button.innerText = "Copied!";
+                    setTimeout(() => {
+                        button.innerText = "Copy";
+                    }, 2000);
+                });
+            });
         </script>
-	</body>
+    </body>
 </html>
