@@ -27,7 +27,7 @@ const posts = (await getCollection('co-hoc-luong-tu')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/quantum-blog/co-hoc-luong-tu/${post.id.replace(/\.[^/.]+$/, "")}/`}>
+								<a href={`/QuantumBlog/co-hoc-luong-tu/${post.id.replace(/\.[^/.]+$/, "")}/`}>
 									<h4 class="title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />

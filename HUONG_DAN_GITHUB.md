@@ -72,7 +72,7 @@ export default defineConfig({
   site: 'https://<Tên_Của_Bạn>.github.io',
   
   // Thay tên bằng tên repository của bạn (nhớ có dấu / 2 đầu)
-  base: '/quantum-blog/', 
+  base: '/QuantumBlog/', 
   
   integrations: [mdx(), sitemap()],
   // ...

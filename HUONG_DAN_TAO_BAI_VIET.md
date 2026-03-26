@@ -65,7 +65,7 @@ Dự án đã được bật sẵn tính năng `remark-math` và `rehype-katex`,
 
 ## 4. Xây dựng và Tải lên (Deploy) Bài Viết
 
-Dự án đã được cấu hình phục vụ với `base: '/quantum-blog/'` trong tệp `astro.config.mjs` nhằm thích ứng tự động với các đường dẫn con trên GitHub Pages.
+Dự án đã được cấu hình phục vụ với `base: '/QuantumBlog/'` trong tệp `astro.config.mjs` nhằm thích ứng tự động với các đường dẫn con trên GitHub Pages.
 
 **Cách triển khai (Deploy) bài viết mới:**
 1. Mở terminal và gõ:
