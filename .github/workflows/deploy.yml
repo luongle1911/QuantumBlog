@@ -14,7 +14,9 @@ permissions:
   pages: write
   id-token: write
 
-build-timezone: 'Asia/Ho_Chi_Minh'
+# ĐÃ SỬA LỖI TẠI ĐÂY: Thiết lập múi giờ thông qua biến môi trường chuẩn
+env:
+  TZ: 'Asia/Ho_Chi_Minh'
 
 jobs:
   build:
