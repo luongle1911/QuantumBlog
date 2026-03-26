@@ -1,0 +1,46 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('co-hoc-luong-tu')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+<!doctype html>
+<html lang="vi">
+	<head>
+		<BaseHead title={`Cơ Học Lượng Tử | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="container" style="padding: 4rem 1.5rem; min-height: 70vh;">
+            <h1 class="gradient-text">Cơ Học Lượng Tử</h1>
+            <p class="subtitle" style="text-align: left; margin: 0 0 3rem 0; color: var(--text-secondary);">Nền tảng lý thuyết và các nguyên lý cốt lõi của thế giới vi mô.</p>
+			
+            <section>
+				{posts.length === 0 ? <p>Chưa có bài viết nào.</p> : (
+				<ul class="post-list">
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/quantum-blog/co-hoc-luong-tu/${post.id.replace(/\.[^/.]+$/, "")}/`}>
+									<h4 class="title">{post.data.title}</h4>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+                                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">{post.data.description}</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+                )}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

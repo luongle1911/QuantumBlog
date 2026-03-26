@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="vi">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		
+		<main class="container hero-section">
+			<div class="hero-content">
+				<h1 class="gradient-text" style="color: var(--primary);">Khám phá Khoa Học Lượng Tử</h1>
+				<p class="subtitle">Nền tảng chia sẻ các bài viết nghiên cứu chuyên sâu về Vật lý vi mô và Công nghệ tính toán thế hệ mới.</p>
+				
+				<div class="card-grid">
+					<a href="/quantum-blog/co-hoc-luong-tu/" class="glass-card link-card">
+						<h2 style="display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5em;">⚛️</span> Cơ Học Lượng Tử</h2>
+						<p>Kho lưu trữ các nguyên lý cốt lõi, từ phương trình Schrödinger, sự chồng chập lượng tử đến vướng mắc lượng tử.</p>
+						<span class="read-more">Xem các bài viết →</span>
+					</a>
+					
+					<a href="/quantum-blog/dien-toan-luong-tu/" class="glass-card link-card">
+						<h2 style="display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5em;">💻</span> Điện Toán Lượng Tử</h2>
+						<p>Các thuật toán lượng tử, cổng logic lượng tử (Qubit) và sự đột phá vượt qua sức mạnh giới hạn của máy tính cổ điển.</p>
+						<span class="read-more">Xem các bài viết →</span>
+					</a>
+				</div>
+			</div>
+		</main>
+		
+		<Footer />
+	</body>
+</html>
