@@ -6,13 +6,27 @@ heroImage: "../../assets/blog-placeholder-about.jpg"
 tags: ["Vật lý lượng tử", "Giới thiệu", "Introduction"]
 ---
 
-## Giới thiệu về công nghệ lượng tử
+## Mục lục
+1. [Giới thiệu về công nghệ lượng tử](#1-giới-thiệu-về-công-nghệ-lượng-tử)
+2. [Ứng dụng trong Điện toán Lượng tử](#2-ứng-dụng-trong-điện-toán-lượng-tử)
+   - 2.1. [Tạo vật liệu và thuốc mới](#21-tạo-vật-liệu-và-thuốc-mới)
+   - 2.2. [Tối ưu hóa phức tạp](#22-tối-ưu-hóa-phức-tạp)
+   - 2.3. [Mã hóa và an ninh mạng](#23-mã-hóa-và-an-ninh-mạng)
+3. [Ứng dụng trong Học máy Lượng tử](#3-ứng-dụng-trong-học-máy-lượng-tử)
+   - 3.1. [Phân tích dữ liệu lớn](#31-phân-tích-dữ-liệu-lớn)
+   - 3.2. [Nhận dạng mẫu](#32-nhận-dạng-mẫu)
+4. [Mục đích của Blog](#4-mục-đích-của-blog)
+5. [Tham khảo thêm](#5-tham-khảo-thêm)
+   - 5.1. [Khóa học Tiếng Việt](#51-khóa-học-tiếng-việt)
+   - 5.2. [Khóa học Tiếng Anh](#52-khóa-học-tiếng-anh)
+
+## 1. Giới thiệu về công nghệ lượng tử
 
 **![][image1]**
 
 Công nghệ lượng tử trong những năm gần đây nổi lên như một phần quan trọng của cuộc cách mạng công nghiệp lần thứ tư (Internet vạn vật \- IoT, Trí tuệ nhân tạo \- AI, Điện toán lượng tử, Công nghệ Nano, Công nghệ Sinh học,...). 
 
-## **Ứng dụng trong Điện toán Lượng tử**
+## 2. Ứng dụng trong Điện toán Lượng tử
 
 ![][image2]
 
@@ -20,34 +34,43 @@ Công nghệ lượng tử trong những năm gần đây nổi lên như một 
 
 Định luật Moore (được đặt tên theo một trong những nhà sáng lập của Intel \- Gordon E. Moore) phát biểu rằng, dự đoán rằng số lượng transistor trên mỗi đơn vị diện tích của mạch tích hợp sẽ tăng gấp đôi khoảng mỗi 18 đến 24 tháng, điều này có nghĩa rằng các transistor sẽ càng ngày càng nhỏ hơn và khi các transistor trở nên quá nhỏ, các hiệu ứng của Cơ học lượng tử sẽ càng trở nên rõ rệt (Xuyên hầm lượng tử sẽ khiến cho trạng thái đóng mở của các transistor không còn chính xác), đây sẽ là một giới hạn đối với các máy tính cổ điển (các transistor sẽ không thể nhỏ hơn nguyên tử được). Tuy nhiên, đây cũng chính là nơi mà các máy tính lượng tử (Quantum Computer) đem lại ưu thế vượt trội khi tại đây các hiệu ứng của cơ học lượng tử không những không phải là rào cản mà còn là lợi thế khi mang lại sức mạnh tính toán vượt trội so với các máy tính thông thường (tham khảo thêm tại đây [Quantum Computers Explained – Limits of Human Technology](https://www.youtube.com/watch?v=JhHMJCUmq28)) . Một ví dụ cụ thể về khả năng tính toán vượt trội của máy tính lượng tử so với máy tính cổ điển là bài test về **phân tích dữ liệu genome**. Trong một thí nghiệm nổi tiếng, **IBM** đã thực hiện một thí nghiệm với máy tính lượng tử của mình, **IBM Quantum System One**, để phân tích một dữ liệu genome. Trong thí nghiệm này, máy tính lượng tử đã hoàn thành phân tích trong vài giờ, trong khi máy tính cổ điển có thể mất hàng tuần hoặc thậm chí hàng tháng để hoàn thành cùng một nhiệm vụ (bạn đọc có thể tham khảo tại đây \- [2308.04525](https://arxiv.org/pdf/2308.04525) ). Hiện nay IBM cũng đang phát triển một nền tảng là IBM Quantum Platform \- IBM \- sử dụng các thuật toán như Quantum Circuit Simulation và Quantum Error Mitigation cho phép người dùng tương tác với các máy tính lượng tử của IBM (bạn đọc có thể tham khảo thêm tại đây \- [https://docs.quantum.ibm.com/](https://docs.quantum.ibm.com/)). Các ứng dụng khác của máy tính lượng tử bao gồm:
 
-* **Tạo vật liệu và thuốc mới:** Các nhà nghiên cứu có thể sử dụng máy tính lượng tử để mô phỏng hành vi của các phân tử và nguyên tử, giúp khám phá và phát triển các loại thuốc, vật liệu siêu dẫn, hoặc pin hiệu suất cao hơn.  
-* **Tối ưu hóa phức tạp:** Các vấn đề tối ưu hóa có mặt trong nhiều ngành, từ logistics, quản lý chuỗi cung ứng, đến lập kế hoạch tài chính. Máy tính lượng tử có thể tìm ra các giải pháp tối ưu trong thời gian ngắn hơn rất nhiều.  
-* **Mã hóa và an ninh mạng:** Các thuật toán mã hóa hiện tại, như RSA, có thể bị phá vỡ bởi máy tính lượng tử trong tương lai. Điều này thúc đẩy sự phát triển của **mật mã hậu lượng tử** (post-quantum cryptography) để bảo vệ dữ liệu trong kỷ nguyên mới.
+### 2.1. Tạo vật liệu và thuốc mới
+Các nhà nghiên cứu có thể sử dụng máy tính lượng tử để mô phỏng hành vi của các phân tử và nguyên tử, giúp khám phá và phát triển các loại thuốc, vật liệu siêu dẫn, hoặc pin hiệu suất cao hơn.
 
-## **Ứng dụng trong Học máy Lượng tử**
+### 2.2. Tối ưu hóa phức tạp
+Các vấn đề tối ưu hóa có mặt trong nhiều ngành, từ logistics, quản lý chuỗi cung ứng, đến lập kế hoạch tài chính. Máy tính lượng tử có thể tìm ra các giải pháp tối ưu trong thời gian ngắn hơn rất nhiều.
+
+### 2.3. Mã hóa và an ninh mạng
+Các thuật toán mã hóa hiện tại, như RSA, có thể bị phá vỡ bởi máy tính lượng tử trong tương lai. Điều này thúc đẩy sự phát triển của **mật mã hậu lượng tử** (post-quantum cryptography) để bảo vệ dữ liệu trong kỷ nguyên mới.
+
+## 3. Ứng dụng trong Học máy Lượng tử
 
 **Học máy lượng tử** (Quantum Machine Learning \- QML) kết hợp sức mạnh của điện toán lượng tử với học máy. Theo sự phát triển của các thuật toán trí tuệ nhân tạo, việc sử dụng tính toán lượng tử mang lại nhiều lợi thế, đặc biệt trong việc phân tích và xử lý các dữ liệu phức tạp (rất nhiều thuật toán AI đều được xây dựng dựa trên việc tìm kiếm một lời giải tốt nhất trong rất nhiều lời giải) dựa trên đặc điểm có thể cùng lúc xử lý nhiều phép toán do các tính chất của cơ học lượng tử (Tính chồng chất \- Supperposition và Tính rối \- Entanglment). Hiện nay có rất nhiều Công ty công nghệ đang phát triển các công nghệ lượng tử sử dụng trong lĩnh vực trí tuệ nhân tạo. Amazon Braket \- AWS \- cho phép các nhà nghiên cứu và phát triển viên sử dụng các máy tính lượng tử từ các nhà cung cấp khác nhau thông qua một số thuật toán như Quantum Machine Learing, Quantum Optimization (tham khảo thêm tại đây \- [Amazon Braket Documentation](https://docs.aws.amazon.com/braket/)). Mặc dù vẫn đang ở giai đoạn đầu, QML hứa hẹn sẽ tăng tốc đáng kể các thuật toán học máy cổ điển và cho phép giải quyết các bài toán lớn hơn:
 
-* **Phân tích dữ liệu lớn:** QML có thể tìm ra các mẫu phức tạp trong các bộ dữ liệu khổng lồ, chẳng hạn như dữ liệu tài chính, dữ liệu y tế, hoặc dữ liệu khí hậu, một cách hiệu quả hơn.  
-* **Nhận dạng mẫu:** Các thuật toán QML có thể cải thiện khả năng nhận dạng hình ảnh, giọng nói, và các dạng dữ liệu khác, vượt qua giới hạn của các mô hình hiện tại.
+### 3.1. Phân tích dữ liệu lớn
+QML có thể tìm ra các mẫu phức tạp trong các bộ dữ liệu khổng lồ, chẳng hạn như dữ liệu tài chính, dữ liệu y tế, hoặc dữ liệu khí hậu, một cách hiệu quả hơn.
+
+### 3.2. Nhận dạng mẫu
+Các thuật toán QML có thể cải thiện khả năng nhận dạng hình ảnh, giọng nói, và các dạng dữ liệu khác, vượt qua giới hạn của các mô hình hiện tại.
 
 ![][image3]  
 *(Nguồn: [Abstract pipeline for inference and training of a hybrid discriminative... | Download Scientific Diagram](https://www.researchgate.net/figure/Abstract-pipeline-for-inference-and-training-of-a-hybrid-discriminative-model-in-TFQ_fig1_339786784))*
 
-**Mục đích của Blog**
+## 4. Mục đích của Blog
 
-Mục đích của Blog tập trung vào việc chia sẻ kiến thức về cơ học lượng tử và các ứng dụng của cơ học lượng tử trong các bài toán thực tế. Blog này được chia làm bốn phần chính là, “Cơ học lượng tử cơ bản”, “Điện toán lượng tử”,”Học máy lượng tử” và “Ứng dụng thực tế”.
+> [!NOTE]  
+> Mục đích của Blog tập trung vào việc chia sẻ kiến thức về cơ học lượng tử và các ứng dụng của cơ học lượng tử trong các bài toán thực tế. Blog này được chia làm bốn phần chính là, “Cơ học lượng tử cơ bản”, “Điện toán lượng tử”, “Học máy lượng tử” và “Ứng dụng thực tế”.
 
 Các khóa học sẽ tập trung vào hai phần chính là “Cơ học lượng tử cơ bản” và “Điện toán lượng tử”, phần về “Ứng dụng thực tế” sẽ là phần giới thiệu về các công nghệ lượng tử khác đang được sử dụng, ví dụ: Truyền thông lượng tử, Mã hóa lượng tử,... “Học máy lượng tử” là một lĩnh vực khá mới nên các bài về lĩnh vực này sẽ cập nhật lâu hơn các phần khác. 
 
-**Tham khảo thêm**
+## 5. Tham khảo thêm
 
-**Khóa học Tiếng Việt**
+### 5.1. Khóa học Tiếng Việt
 
 1. Khóa học về cơ học lượng tử và vật lý nguyên tử của Đại học sư phạm kỹ thuật TP.HCM ([https://ipt.hcmute.edu.vn/bai-giang-vat-ly-ky-thuat/co-hoc-luong-tu-vat-ly-nguyen-tu/](https://ipt.hcmute.edu.vn/bai-giang-vat-ly-ky-thuat/co-hoc-luong-tu-vat-ly-nguyen-tu/))  
-2. Giáo trình về cơ học lượng tử của Đại học Quốc gia ([Giáo trình Cơ học lượng tử \- Đại học Quốc gia \- mẫu 257736 \- Tài liệu đại học](https://www.tailieudaihoc.com/doc/257736.html)) – Note: cần xem lại khóa học này vì chưa đạt yêu cầu.
+2. Giáo trình về cơ học lượng tử của Đại học Quốc gia ([Giáo trình Cơ học lượng tử \- Đại học Quốc gia \- mẫu 257736 \- Tài liệu đại học](https://www.tailieudaihoc.com/doc/257736.html))  
 
-**Khóa học Tiếng Anh**
+### 5.2. Khóa học Tiếng Anh
 
 1. Quantum Machine Learning (with IBM Quantum) \- openHPI ([Quantum Machine Learning (with IBM Quantum) | openHPI](https://open.hpi.de/courses/qc-machineLearning2023)) \- Khóa học này giúp bạn hiểu về cơ bản và cấp độ nâng cao của Quantum Machine Learning, giải quyết các nhiệm vụ thực tế với các mô hình lượng tử và cổ điển.  
 2. Hands-On Quantum Machine Learning with Python \- Educative ([Hands-On Quantum Machine Learning with Python \- AI-Powered Course](https://www.educative.io/courses/hands-on-quantum-machine-learning-python)) Khóa học này giúp bạn học cách sử dụng Python để tạo các đoạn mã lượng tử và giải quyết các nhiệm vụ học máy với các thuật toán lượng tử  

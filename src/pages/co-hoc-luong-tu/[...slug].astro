@@ -3,19 +3,37 @@ import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('co-hoc-luong-tu');
-	return posts.map((post) => ({
+	const posts = (await getCollection('co-hoc-luong-tu')).sort(
+		(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+	);
+	return posts.map((post, index) => ({
 		params: { slug: post.id.replace(/\.[^/.]+$/, "") },
-		props: post,
+		props: { 
+            post, 
+            postIndex: index,
+            prevPost: index > 0 ? posts[index - 1] : null,
+            nextPost: index < posts.length - 1 ? posts[index + 1] : null
+        },
 	}));
 }
-type Props = CollectionEntry<'co-hoc-luong-tu'>;
 
-const post = Astro.props;
-const allPosts = await getCollection('co-hoc-luong-tu');
+type Props = {
+    post: CollectionEntry<'co-hoc-luong-tu'>;
+    postIndex: number;
+    prevPost: CollectionEntry<'co-hoc-luong-tu'> | null;
+    nextPost: CollectionEntry<'co-hoc-luong-tu'> | null;
+};
+
+const post = (Astro.props as any).post || (Astro.props as unknown as CollectionEntry<'co-hoc-luong-tu'>);
+const postIndex = (Astro.props as any).postIndex;
+const prevPost = (Astro.props as any).prevPost;
+const nextPost = (Astro.props as any).nextPost;
+const allPosts = (await getCollection('co-hoc-luong-tu')).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
 const { Content } = await render(post);
 ---
 
-<BlogPost {...post.data} posts={allPosts} collectionRoute="co-hoc-luong-tu">
+<BlogPost {...post.data} postIndex={postIndex} prevPost={prevPost} nextPost={nextPost} posts={allPosts} collectionRoute="co-hoc-luong-tu">
 	<Content />
 </BlogPost>

@@ -1,4 +1,5 @@
 ---
+import Search from './Search.astro';
 ---
 <header class="glass-header">
   <nav class="container-wide nav-container">
@@ -7,7 +8,8 @@
 		Lượng Tử Cơ Bản
 	</a>
     <div class="nav-links" style="display: flex; align-items: center;">
-      <a href="/QuantumBlog/" style="margin-right: 0.5rem;">Trang Chủ</a>
+      <a href="/QuantumBlog/" style="margin-right: 0.5rem; font-weight: 500; transition: color 0.2s;">Trang Chủ</a>
+      <a href="/QuantumBlog/gioi-thieu/" style="margin-right: 1.5rem; font-weight: 500; transition: color 0.2s;">Giới thiệu</a>
       <div class="dropdown">
         <button class="dropbtn">Chủ đề ▾</button>
         <div class="dropdown-content">
@@ -15,6 +17,7 @@
           <a href="/QuantumBlog/dien-toan-luong-tu/">💻 Điện Toán Lượng Tử</a>
         </div>
       </div>
+      <Search />
     </div>
   </nav>
 </header>

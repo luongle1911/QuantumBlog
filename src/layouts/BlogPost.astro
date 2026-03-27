@@ -9,6 +9,9 @@ import Header from "../components/Header.astro";
 type Props = CollectionEntry<"co-hoc-luong-tu">["data"] & {
     posts?: Array<any>;
     collectionRoute?: string;
+    postIndex?: number;
+    prevPost?: any;
+    nextPost?: any;
 };
 
 const {
@@ -20,6 +23,9 @@ const {
     tags,
     posts,
     collectionRoute,
+    postIndex,
+    prevPost,
+    nextPost,
 } = Astro.props;
 ---
 
@@ -66,17 +72,18 @@ const {
                     <aside class="sidebar left-sidebar">
                         <h3>Danh sách bài viết</h3>
                         <ul>
-                            {posts.map((p) => {
+                            {posts.map((p: any, idx: number) => {
                                 const postSlug = p.id.replace(/\.[^/.]+$/, "");
                                 const isActive =
                                     Astro.url.pathname.includes(postSlug);
+                                const cleanTitle = p.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim();
                                 return (
                                     <li>
                                         <a
                                             href={`/QuantumBlog/${collectionRoute}/${postSlug}/`}
                                             class={isActive ? "active" : ""}
                                         >
-                                            {p.data.title}
+                                            {`Bài ${idx + 1}: ${cleanTitle}`}
                                         </a>
                                     </li>
                                 );
@@ -113,10 +120,27 @@ const {
                                     )
                                 }
                             </div>
-                            <h1>{title}</h1>
+                            <h1>{postIndex !== undefined ? `Bài ${postIndex + 1}: ` : ""}{title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h1>
                             <hr />
                         </div>
                         <slot />
+                        { (prevPost || nextPost) && (
+                            <div class="post-navigation glass-card" style="display: flex; justify-content: space-between; margin-top: 3rem; padding: 1.5rem; gap: 1rem; border: 1px solid rgba(52, 144, 220, 0.2);">
+                                {prevPost ? (
+                                    <a href={`/QuantumBlog/${collectionRoute}/${prevPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn prev" style="text-decoration: none; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">← Bài {postIndex ? postIndex : 1}</div>
+                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{prevPost.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h4>
+                                    </a>
+                                ) : <div style="flex: 1;"></div>}
+                                
+                                {nextPost ? (
+                                    <a href={`/QuantumBlog/${collectionRoute}/${nextPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn next" style="text-decoration: none; text-align: right; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">Bài {postIndex !== undefined ? postIndex + 2 : 2} →</div>
+                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{nextPost.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h4>
+                                    </a>
+                                ) : <div style="flex: 1;"></div>}
+                            </div>
+                        )}
                         {
                             tags && tags.length > 0 && (
                                 <div
@@ -146,17 +170,9 @@ const {
                             class="comments-title"
                             style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--primary);"
                         >
-                            Thảo luận Khoa học
+                            Bình luận
                         </h3>
-                        <div
-                            style="padding: 1rem; margin-bottom: 1rem; background-color: var(--secondary); border: 1px solid var(--primary); border-radius: 8px; color: var(--text-primary); font-size: 0.95rem;"
-                        >
-                            <strong>Lưu ý:</strong> Tính năng bình luận Giscus hiện
-                            đang dùng cấu hình mẫu. Để hoạt động thực tế, bạn cần
-                            cấu hình <code>data-repo</code> trong file <code
-                                >src/layouts/BlogPost.astro</code
-                            >.
-                        </div>
+
                         <div class="giscus"></div>
                         <script
                             src="https://giscus.app/client.js"
@@ -188,13 +204,15 @@ const {
                         <a
                             href="/QuantumBlog/co-hoc-luong-tu/"
                             style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.75rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
-                            >⚛️ Cơ Học Lượng Tử</a>
+                            >⚛️ Cơ Học Lượng Tử</a
+                        >
                     </li>
                     <li>
                         <a
                             href="/QuantumBlog/dien-toan-luong-tu/"
                             style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.5rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
-                            >💻 Điện Toán Lượng Tử</a>
+                            >💻 Điện Toán Lượng Tử</a
+                        >
                     </li>
                 </ul>
 

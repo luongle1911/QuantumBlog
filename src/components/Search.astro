@@ -1,0 +1,176 @@
+---
+---
+<div class="search-container">
+  <div class="search-box glass-card">
+    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" id="search-input" placeholder="Tìm kiếm bài viết, thẻ (tags)..." autocomplete="off" />
+  </div>
+  <div id="search-results" class="search-results glass-card hidden">
+    <ul id="results-list"></ul>
+  </div>
+</div>
+
+<style>
+  .search-container {
+    position: relative;
+    margin-left: 1rem;
+    z-index: 100;
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    width: 250px;
+  }
+  .search-box:focus-within {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 3px rgba(52, 144, 220, 0.3);
+    width: 300px;
+  }
+  .search-icon {
+    color: var(--text-secondary);
+  }
+  #search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    font-family: inherit;
+  }
+  #search-input::placeholder {
+    color: #888;
+  }
+  
+  .search-results {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .search-results.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+  
+  #results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  #results-list li a {
+    display: block;
+    padding: 0.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+  }
+  #results-list li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  #results-list li h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: var(--primary);
+  }
+  #results-list li p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+  .no-results {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+</style>
+
+<script>
+  interface SearchResult {
+    title: string;
+    description: string;
+    tags: string[];
+    url: string;
+    body: string;
+  }
+  let searchData: SearchResult[] = [];
+  const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+  const searchResults = document.getElementById('search-results');
+  const resultsList = document.getElementById('results-list');
+
+  // Fetch search data on focus
+  searchInput?.addEventListener('focus', async () => {
+    if (searchData.length === 0) {
+      try {
+        const response = await fetch('/QuantumBlog/search.json');
+        searchData = await response.json();
+      } catch (error) {
+        console.error('Error fetching search indices:', error);
+      }
+    }
+  });
+
+  searchInput?.addEventListener('input', (e) => {
+    const target = e.target as HTMLInputElement;
+    const query = target.value.toLowerCase().trim();
+    if (!query) {
+      searchResults?.classList.add('hidden');
+      return;
+    }
+    
+    // Simple filter
+    const matches = searchData.filter(post => {
+      return (post.title || '').toLowerCase().includes(query) ||
+             (post.description || '').toLowerCase().includes(query) ||
+             (post.body || '').toLowerCase().includes(query) ||
+             (post.tags && post.tags.some((tag: string) => (tag || '').toLowerCase().includes(query)));
+    }).slice(0, 6); // Limit to 6 results
+    
+    searchResults?.classList.remove('hidden');
+    
+    if (matches.length > 0) {
+      if (resultsList) resultsList.innerHTML = matches.map(m => `
+        <li>
+          <a href="${m.url}">
+            <h4>${m.title}</h4>
+            <p>${(m.description || '').substring(0, 70)}...</p>
+          </a>
+        </li>
+      `).join('');
+    } else {
+      if (resultsList) resultsList.innerHTML = '<li class="no-results">Không tìm thấy bài viết nào</li>';
+    }
+  });
+
+  // Close results on click outside
+  document.addEventListener('click', (e) => {
+    if (searchInput && !searchInput.contains(e.target as Node) && searchResults && !searchResults.contains(e.target as Node)) {
+      searchResults.classList.add('hidden');
+    }
+  });
+</script>
