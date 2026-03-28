@@ -76,14 +76,14 @@ const {
                                 const postSlug = p.id.replace(/\.[^/.]+$/, "");
                                 const isActive =
                                     Astro.url.pathname.includes(postSlug);
-                                const cleanTitle = p.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim();
+                                const cleanTitle = p.data.title;
                                 return (
                                     <li>
                                         <a
                                             href={`/QuantumBlog/${collectionRoute}/${postSlug}/`}
                                             class={isActive ? "active" : ""}
                                         >
-                                            {`Bài ${idx + 1}: ${cleanTitle}`}
+                                            {cleanTitle}
                                         </a>
                                     </li>
                                 );
@@ -120,7 +120,7 @@ const {
                                     )
                                 }
                             </div>
-                            <h1>{postIndex !== undefined ? `Bài ${postIndex + 1}: ` : ""}{title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h1>
+                            <h1>{title}</h1>
                             <hr />
                         </div>
                         <slot />
@@ -128,15 +128,15 @@ const {
                             <div class="post-navigation glass-card" style="display: flex; justify-content: space-between; margin-top: 3rem; padding: 1.5rem; gap: 1rem; border: 1px solid rgba(52, 144, 220, 0.2);">
                                 {prevPost ? (
                                     <a href={`/QuantumBlog/${collectionRoute}/${prevPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn prev" style="text-decoration: none; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
-                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">← Bài {postIndex ? postIndex : 1}</div>
-                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{prevPost.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h4>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">← Bài trước</div>
+                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{prevPost.data.title}</h4>
                                     </a>
                                 ) : <div style="flex: 1;"></div>}
                                 
                                 {nextPost ? (
                                     <a href={`/QuantumBlog/${collectionRoute}/${nextPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn next" style="text-decoration: none; text-align: right; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
-                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">Bài {postIndex !== undefined ? postIndex + 2 : 2} →</div>
-                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{nextPost.data.title.replace(/^Bài\s*\d+\s*:\s*/i, "").trim()}</h4>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">Bài tiếp theo →</div>
+                                        <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{nextPost.data.title}</h4>
                                     </a>
                                 ) : <div style="flex: 1;"></div>}
                             </div>

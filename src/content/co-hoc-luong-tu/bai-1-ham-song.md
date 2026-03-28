@@ -2,112 +2,141 @@
 title: "Bài 1: Hàm sóng" 
 description: "Một bài viết mẫu khoa học bao gồm đầy đủ các định dạng văn bản cơ bản để kiểm tra giao diện scholarly."
 pubDate: "Mar 26 2026"
-heroImage: "../../assets/blog-placeholder-about.jpg"
+heroImage: "../../assets/bai-1-ham-song.jpg"
 tags: ["Giao thoa", "Wave-function", "Hàm sóng"]
 ---
 
-**Phần 1: Cơ học lượng tử cơ bản.**
 
-**Bài 1: Hàm sóng**
 
-**Mục lục:**
+# Phần 1: Cơ học lượng tử cơ bản
+
+## Bài 1: Hàm sóng
+
+## Mục lục
 
 Nội dung của bài này bao gồm:
 
-1. Lưỡng tính sóng hạt.  
-- Thí nghiệm hai khe.  
-- Hiệu ứng quang điện.  
-- Sóng vật chất.  
-2. Số phức và chuyển động quay.  
-- Số phức.  
-- Chuyển động quay.  
-3. Xây dựng hàm sóng.
+- [1. Lưỡng tính sóng hạt](#1-lưỡng-tính-sóng-hạt)
+  - [Thí nghiệm hai khe](#thí-nghiệm-hai-khe-double-slit-experiment)
+  - [Hiệu ứng quang điện](#hiệu-ứng-quang-điện-photoelectric-effect)
+  - [Sóng vật chất](#sóng-vật-chất)
+- [2. Số phức và chuyển động quay](#2-số-phức-và-chuyển-động-quay)
+  - [Số phức](#số-phức)
+  - [Chuyển động quay](#chuyển-động-quay)
+- [3. Xây dựng hàm sóng](#3-xây-dựng-hàm-sóng)
 
-1. **Lưỡng tính sóng hạt.**
+---
+
+## 1. Lưỡng tính sóng hạt
 
 Cơ học lượng tử là một lĩnh vực của vật lý học nghiên cứu các hiện tượng ở quy mô hạt rất nhỏ, như nguyên tử và các hạt dưới nguyên tử. Đây là một trong những lý thuyết nền tảng của vật lý hiện đại, được phát triển vào đầu thế kỷ 20 bởi các nhà khoa học như Max Planck, Albert Einstein, Niels Bohr và Erwin Schrodinger. Trước thời kỳ này Cơ học Cổ điển (hay còn gọi là Cơ học Newton vì nó thường dựa trên 3 định luật nổi tiếng của Newton) hầu như có thể giải thích mọi hiện tượng tự nhiên, đến mức tài thời điểm đó các nhà khoa học thường truyền miệng rằng vật lý đường thời đã đầy đủ, các vấn đề còn lại chỉ là sai số của các phép đo. Tại thời điểm đó, một trong số ít các vấn đề của vật lý học liên quan đến việc xác định ánh sáng là “hạt” hay “sóng”, đây tưởng chừng như chỉ là một vấn đề nhỏ của vật lý học nhưng các nhà khoa học không ngờ rằng câu trả lời cho vấn đề này cùng với “Thuyết tương đối” sẽ là 2 trụ cột của vật lý hiện đại làm thay đổi cách nhìn của chúng ta về thế giới.
 
-**Thí nghiệm hai khe (double-slit experiment)**
-
-Các bạn đọc chắc hẳn không xa lạ gì với thí nghiệm này trong chương trình học vật lý cấp 3 trong bài “Sóng ánh sáng” hay còn được biết đến với tên gọi “Giao thoa ánh sáng với khe Young” được đặt tên theo tên gọi của một nhà thí nghiệm nổi tiếng là Thomas Young (1773 \- 1829). Tuy nhiên, tôi vẫn sẽ tóm tắt sơ qua về thí nghiệm này.
+### Thí nghiệm hai khe (double-slit experiment)
+<br />
+Các bạn đọc chắc hẳn không xa lạ gì với thí nghiệm này trong chương trình học vật lý cấp 3 trong bài “Sóng ánh sáng” hay còn được biết đến với tên gọi “Giao thoa ánh sáng với khe Young” được đặt tên theo tên gọi của một nhà thí nghiệm nổi tiếng là Thomas Young (1773 - 1829). Tuy nhiên, tôi vẫn sẽ tóm tắt sơ qua về thí nghiệm này.
 
 Khi thực hiện chiếu một nguồn sáng qua một khe hẹp, ta thường thấy rằng ánh sáng không chỉ truyền qua khe hẹp mà ánh sáng còn uốn cong quanh mép của khe và tạo ra các vùng sáng. Đây là một hiện tượng thường thấy trong cơ học sóng gọi là “hiện tượng nhiễu xạ”. Các bạn có thể tự thực hiện thí nghiệm này bằng cách đặt một nguồn sáng trong một hộp kín và đục một lỗ nhỏ trên thân hộp.  
-![][image1]  
-*(Hình 1.1. Mô tả về hiện tượng nhiễu xạ)*  
-*(Nguồn: [1.1 Introduction to electromagnetic waves and electromagnetic spectrum | unit 1 wave optics \- Goseeko](https://www.goseeko.com/reader/notes/other-univ/engineering/computer-engineering-1/first-year/semester/engineering-physics-39/unit-1-wave-optics-22))*
 
-Đây là một trong các bằng chứng quan trọng chứng minh ánh sáng có tính chất của sóng, bạn đọc có thể tiếp tục nghi ngờ rằng một hiện tượng giống như nhiễu xạ có thể quyết định tính chất sóng của ánh sáng (thực tế có rất nhiều bằng chứng chứng minh tính chất sóng của hạt, vì vậy tôi sẽ đề cập đến một trong các hiện tượng đặc trưng của sóng là giao thoa). Vậy câu hỏi tiếp theo đặt ra cho chúng ta là, nếu ánh sáng có tính chất sóng, vậy bước sóng của nó là bao nhiêu? Vì thực tế rằng bước sóng của ánh sáng nhìn thấy được dao động từ 380 \- 750 nm (nanomet), để cho bạn đọc dễ hình dung thì 1 cm \= 10 triệu nm, vì vậy việc đo hay quan sát bước sóng của ánh sáng bằng mắt thường là không khả thi.
+<div align="center">
+
+![][image1]
+
+*(Hình 1.1. Mô tả về hiện tượng nhiễu xạ)*
+
+*(Nguồn: [1.1 Introduction to electromagnetic waves and electromagnetic spectrum | unit 1 wave optics - Goseeko](https://www.goseeko.com/reader/notes/other-univ/engineering/computer-engineering-1/first-year/semester/engineering-physics-39/unit-1-wave-optics-22))*
+
+</div>
+
+Đây là một trong các bằng chứng quan trọng chứng minh ánh sáng có tính chất của sóng, bạn đọc có thể tiếp tục nghi ngờ rằng một hiện tượng giống như nhiễu xạ có thể quyết định tính chất sóng của ánh sáng (thực tế có rất nhiều bằng chứng chứng minh tính chất sóng của hạt, vì vậy tôi sẽ đề cập đến một trong các hiện tượng đặc trưng của sóng là giao thoa). Vậy câu hỏi tiếp theo đặt ra cho chúng ta là, nếu ánh sáng có tính chất sóng, vậy bước sóng của nó là bao nhiêu? Vì thực tế rằng bước sóng của ánh sáng nhìn thấy được dao động từ 380 - 750 nm (nanomet), để cho bạn đọc dễ hình dung thì 1 cm = 10 triệu nm, vì vậy việc đo hay quan sát bước sóng của ánh sáng bằng mắt thường là không khả thi.
 
 Chúng ta đều biết rằng, hiện tượng giao thoa của sóng là sự kết hợp của hai hoặc nhiều sóng khi chúng gặp nhau, tạo ra một mô hình sóng mới. Và chúng ta cũng có thể thấy được hiện tượng này xảy ra đối với ánh sáng thông qua việc đặt 2 nguồn sóng (đơn sắc) cạnh nhau, và đặt một tấm chắn phía trước 2 nguồn sáng này. Tuy nhiên việc chọn ra 2 nguồn sóng (đơn sắc) giống nhau là rất khó (do các tính chất như bước sóng, pha và biên độ đều ảnh hưởng đến sự giao thoa) vì vậy, chúng ta sẽ “cải tiến” thí nghiệm đầu tiên bằng cách đục 2 khe nhỏ, sau đó dùng một nguồn sáng (đơn sắc) chiếu qua, khi đó ánh sáng phát ra từ 2 khe sẽ hoạt động giống như 2 nguồn sáng giống nhau (về bước sóng, biên độ sóng và pha). Cụ thể như sau:
 
-![][image2]  
-*(Hình 1.2. Thí nghiệm 2 khe)*  
-*(Nguồn: [Tóm Tắt Công Thức Vật Lý 12: Giao Thoa Ánh Sáng Chọn Lọc](https://old.kienguru.vn/blog/tom-tat-cong-thuc-vat-ly-12-giao-thoa-anh-sang-chon-loc))*  
-Qua thí nghiệm, ta sẽ thấy trên màn chắn xuất hiện các vân sáng (tối) giao thoa lẫn nhau (đây lại là một bằng chứng nữa về tính chất sóng của ánh sáng). Và bằng cách đo khoảng cách giữa 2 vân sáng (tối) liền kề (ký hiệu là x), khoảng cách giữa 2 khe (ký hiệu là a) và khoảng cách từ 2 khe đến màn chắn (ký hiệu là D). Cụ thể, công thức tính bước sóng ánh sáng ($$\\lambda$$) là:
+<div align="center">
 
-$$ \\lambda \= \\frac{a \\cdot x}{D} $$
+![][image2]
 
-Ví dụ cụ thể trong trường hợp x \= 0.5 cm \= 0.005 m, D \= 25 cm \= 0.25 m và a \= 2 cm \= 0.02 m, chúng ta có thể tính được bước sóng của nguồn sáng trên bằng:
+*(Hình 1.2. Thí nghiệm 2 khe)*
 
-$$ \\lambda \= \\frac{0.02 \\cdot 0.005}{0.25} \= \\frac{0.0001}{0.25} \= 0.0004 \\text{ m} \= 400 \\text{ nm} $$
+*(Nguồn: [Tóm Tắt Công Thức Vật Lý 12: Giao Thoa Ánh Sáng Chọn Lọc](https://old.kienguru.vn/blog/tom-tat-cong-thuc-vat-ly-12-giao-thoa-anh-sang-chon-loc))*
 
-Đây là bước sóng của ánh sáng màu tím trong quang phổ ánh sáng nhìn thấy được bằng mắt thường, các bạn có thể tự thực hiện thí nghiệm này tại nhà (tham khảo thêm tại \- [THÍ NGHIỆM GIAO THOA ÁNH SÁNG VỚI KHE YOUNG](https://www.youtube.com/watch?v=6vKSjbZjeM0)). Qua 2 thí nghiệm trên ta có thể thấy rằng ánh sáng có tính chất sóng rất rõ ràng. Tuy nhiên, nếu chúng ta giả định rằng ánh sáng là sóng thì sẽ không thể giải thích được hiện tượng tôi sắp đề cập sau đây, đó là về hiệu ứng quang điện.
+</div>
 
-**Hiệu ứng quang điện (Photoelectric Effect)**
+Qua thí nghiệm, ta sẽ thấy trên màn chắn xuất hiện các vân sáng (tối) giao thoa lẫn nhau (đây lại là một bằng chứng nữa về tính chất sóng của ánh sáng). Và bằng cách đo khoảng cách giữa 2 vân sáng (tối) liền kề (ký hiệu là x), khoảng cách giữa 2 khe (ký hiệu là a) và khoảng cách từ 2 khe đến màn chắn (ký hiệu là D). Cụ thể, công thức tính bước sóng ánh sáng ($\lambda$) là:
 
-Hiệu ứng quang điện là một hiện tượng vật lý quan trọng trong đó electron được giải phóng từ bề mặt của một kim loại khi bị chiếu sáng bởi ánh sáng có tần số đủ cao. Hiện tượng này được khám phá bởi Heinrich Hertz vào năm 1887, nhưng nó được giải thích một cách toàn diện bởi Albert Einstein vào năm 1905 (giả thiết về lượng tử ánh sáng được đề xuất vào năm 1900 bởi Max Planck nhằm giải thích bức xạ vật đen, Einstein đã mở rộng nó vào năm 1905). Einstein đã nhận giải Nobel Vật lý năm 1921 cho công trình nghiên cứu của mình về hiệu ứng quang điện.Thí nghiệm này giúp giải thích tại sao ánh sáng có thể tạo ra dòng điện khi chiếu vào một kim loại. Dưới đây là mô tả về thí nghiệm (video tham khảo về hiệu ứng quang điện tại \- [Hiệu ứng Quang điện \#khoahoc \#kienthuc](https://www.youtube.com/shorts/WSc8B7tODH8)):
+$$
+\lambda = \frac{a \cdot x}{D}
+$$
 
-### **Thiết lập thí nghiệm**
+Ví dụ cụ thể trong trường hợp x = 0.5 cm = 0.005 m, D = 25 cm = 0.25 m và a = 2 cm = 0.02 m, chúng ta có thể tính được bước sóng của nguồn sáng trên bằng:
 
-1. **Nguồn ánh sáng**:  
-   * Sử dụng nguồn ánh sáng có thể điều chỉnh tần số và cường độ, chẳng hạn như đèn LED hoặc laser.  
-2. **Kim loại nhạy sáng**:  
-   * Một tấm kim loại nhạy cảm với ánh sáng, thường là kim loại kiềm như natri hoặc kali, được đặt trong chân không hoặc trong một ống chứa khí trơ.  
-3. **Bộ phát hiện electron**:  
-   * Hệ thống phát hiện và đo lường các electron thoát ra từ bề mặt kim loại, bao gồm một cực dương (anode) và cực âm (cathode).
+$$
+\lambda = \frac{0.02 \cdot 0.005}{0.25} = \frac{0.0001}{0.25} = 0.0004 \text{ m} = 400 \text{ nm}
+$$
 
-### **Tiến hành thí nghiệm**
+Đây là bước sóng của ánh sáng màu tím trong quang phổ ánh sáng nhìn thấy được bằng mắt thường, các bạn có thể tự thực hiện thí nghiệm này tại nhà (tham khảo thêm tại - [THÍ NGHIỆM GIAO THOA ÁNH SÁNG VỚI KHE YOUNG](https://www.youtube.com/watch?v=6vKSjbZjeM0)). Qua 2 thí nghiệm trên ta có thể thấy rằng ánh sáng có tính chất sóng rất rõ ràng. Tuy nhiên, nếu chúng ta giả định rằng ánh sáng là sóng thì sẽ không thể giải thích được hiện tượng tôi sắp đề cập sau đây, đó là về hiệu ứng quang điện.
 
-1. **Chiếu sáng**:  
-   * Chiếu ánh sáng có tần số cao (thường là ánh sáng cực tím) vào bề mặt kim loại.  
-2. **Giải phóng electron**:  
-   * Khi các photon ánh sáng chiếu vào bề mặt kim loại, chúng truyền năng lượng cho các electron trong kim loại. Nếu năng lượng của photon lớn hơn hoặc bằng công thoát của electron, các electron sẽ thoát ra khỏi bề mặt kim loại.  
-3. **Tạo dòng điện**:  
-   * Các electron thoát ra được thu thập bởi cực dương, tạo ra dòng điện. Cường độ dòng điện này được đo lường và ghi lại.
+### Hiệu ứng quang điện (Photoelectric Effect)
+<br />
+Hiệu ứng quang điện là một hiện tượng vật lý quan trọng trong đó electron được giải phóng từ bề mặt của một kim loại khi bị chiếu sáng bởi ánh sáng có tần số đủ cao. Hiện tượng này được khám phá bởi Heinrich Hertz vào năm 1887, nhưng nó được giải thích một cách toàn diện bởi Albert Einstein vào năm 1905 (giả thiết về lượng tử ánh sáng được đề xuất vào năm 1900 bởi Max Planck nhằm giải thích bức xạ vật đen, Einstein đã mở rộng nó vào năm 1905). Einstein đã nhận giải Nobel Vật lý năm 1921 cho công trình nghiên cứu của mình về hiệu ứng quang điện.Thí nghiệm này giúp giải thích tại sao ánh sáng có thể tạo ra dòng điện khi chiếu vào một kim loại. Dưới đây là mô tả về thí nghiệm (video tham khảo về hiệu ứng quang điện tại - [Hiệu ứng Quang điện #khoahoc #kienthuc](https://www.youtube.com/shorts/WSc8B7tODH8)):
+
+### Thiết lập thí nghiệm
+
+1. **Nguồn ánh sáng**: Sử dụng nguồn ánh sáng có thể điều chỉnh tần số và cường độ, chẳng hạn như đèn LED hoặc laser.  
+2. **Kim loại nhạy sáng**: Một tấm kim loại nhạy cảm với ánh sáng, thường là kim loại kiềm như natri hoặc kali, được đặt trong chân không hoặc trong một ống chứa khí trơ.  
+3. **Bộ phát hiện electron**: Hệ thống phát hiện và đo lường các electron thoát ra từ bề mặt kim loại, bao gồm một cực dương (anode) và cực âm (cathode).
+
+### Tiến hành thí nghiệm
+
+1. **Chiếu sáng**: Chiếu ánh sáng có tần số cao (thường là ánh sáng cực tím) vào bề mặt kim loại.  
+2. **Giải phóng electron**: Khi các photon ánh sáng chiếu vào bề mặt kim loại, chúng truyền năng lượng cho các electron trong kim loại. Nếu năng lượng của photon lớn hơn hoặc bằng công thoát của electron, các electron sẽ thoát ra khỏi bề mặt kim loại.  
+3. **Tạo dòng điện**: Các electron thoát ra được thu thập bởi cực dương, tạo ra dòng điện. Cường độ dòng điện này được đo lường và ghi lại.
+
+<br />
 
 Tuy nhiên trong thí nghiệm này, chúng ta sẽ nhận ra rằng không phải tất cả mọi ánh sáng đều có thể gây ra hiệu ứng quang điện, mà chỉ một vài ánh sáng với bước sóng nhỏ (thường là tia cực tím) mới có thể gây ra hiệu ứng này. Điều này có nghĩa rằng kể cả khi ta tăng cường độ ánh sáng lên bao nhiêu lần mà không thay đổi bước sóng của ánh sáng, thì hiệu ứng quang điện cũng không thể xảy ra. Điều này dường như trái với suy nghĩ thông thường khi coi ánh sáng là sóng, vì nếu ánh sáng là sóng, vậy việc tăng cường độ ánh sáng sẽ làm tăng năng lượng mà electron nhận được, và khi năng lượng mà electron nhận được vượt qua công thoát của electron thì hiệu ứng quang điện phải xảy ra.
 
-Vậy từ quan sát trên, Albert Einstein đã xây dựng thuyết “Lượng tử ánh sáng” (1905 \- Albert Einstein được trao Giải Nobel Vật lý năm 1921 cho "các đóng góp của ông cho vật lý lý thuyết, đặc biệt là cho phát hiện ra quy luật hiệu ứng quang điện"). Bằng cách coi ánh sáng là các hạt (gọi là photon) rời rạc sẽ mang năng lượng bằng:
+Vậy từ quan sát trên, Albert Einstein đã xây dựng thuyết “Lượng tử ánh sáng” (1905 - Albert Einstein được trao Giải Nobel Vật lý năm 1921 cho "các đóng góp của ông cho vật lý lý thuyết, đặc biệt là cho phát hiện ra quy luật hiệu ứng quang điện"). Bằng cách coi ánh sáng là các hạt (gọi là photon) rời rạc sẽ mang năng lượng bằng:
 
-$$ E \= h \\cdot f \\tag{1.1}$$
-
-Trong đó:
-
-- $$h$$ là hằng số Planck và có giá trị $$ h \\approx 6.62607015 \\times 10^{-34} \\, \\text{J} \\cdot \\text{s} $$  
-- $$f$$ là tần số của ánh sáng và được tính thông qua công thức ( $$c$$ là tốc độ ánh sáng trong chân không $$c \= 3 \\times 10^8 \\, \\text{m/s}$$)  
-  $$ f \= \\frac{c}{\\lambda} $$
-
-Giả thiết rằng tại mỗi thời điểm mỗi electron chỉ hấp thụ một photon và hiệu ứng quang điện sẽ xảy ra gần như ngay lập tức và không có độ trễ đáng kể (điều này nhằm giải thích việc khi tăng cường độ ánh sáng hay số lượng photon sẽ không làm hiệu ứng quang điện xảy ra). Bạn đọc có thể tham khảo thêm về giá thuyết về Lượng tử ánh sáng tại ([Light \- Photons, Wavelengths, Quanta | Britannica](https://www.britannica.com/science/light/Quantum-theory-of-light)).
-
-Lý thuyết của Einstein về Lượng tử ánh sáng là một cơ sở vững chắc về việc ánh sáng mang tính chất của hạt (tính xác định trong không gian \- spatial determinacy, có động lượng $$p$$ \- momentum).
-
-**Sóng vật chất**
-
-Hai quan điểm trên về tính chất của ánh sáng đã tồn tại song song trong một khoảng thời gian dài cho đến khi nhà vật lý học người Pháp Louis de Broglie (1892 \- 1987\) đưa ra giả thiết về “Sóng vật chất” (1924, ý tưởng của ông bắt đầu từ việc nếu ánh sáng vừa có tính chất hạt vừa có tính chất sóng thì các hạt vật chất (đã xác định tính chất hạt như electron, proton,...) có mang tính chất của sóng luôn không, và dựa trên các thí nghiệm đo đạc ông đã đưa ra giả thiết về “Sóng vật chất” của mọi hạt vật chất. Điều này có nghĩa rằng không chỉ ánh sáng, mà các hạt vật chất khác (có khối lượng) như electron, proton, neutron,... hay thậm chí là tôi, bạn hay mọi vật chất tồn tại trong vũ trụ đều có tính chất sóng. Đây là một trong những đột phá quan trọng và là giả thiết nền tảng cho cơ học lượng tử sau này (tham khảo chi tiết Giả thiết về sóng vật chất tại [BROGLIE.TEX](https://fondationlouisdebroglie.org/AFLB-classiques/aflb124p001.pdf)).
-
-Giả thiết của Broglie cho rằng mỗi hạt (hoặc chùm hạt) vật chất chuyển động với động lượng (momentum) $$p$$, tương đương với một sóng với bước sóng $$\\lambda$$ lan truyền trong không gian, và mối liên hệ này được biểu diễn thông qua công thức:
-
-$$ \\lambda \= \\frac{h}{p} $$
+$$
+E = h \cdot f \tag{1.1}
+$$
 
 Trong đó:
 
-- $$h$$ là hằng số Planck.  
-- $$\\lambda$$ là bước sóng.  
-- $$p$$ là động lượng của hạt với khối lượng $$m$$ và vận tốc $$v$$ được tính bằng công thức:
+- $h$ là hằng số Planck và có giá trị $h \approx 6.62607015 \times 10^{-34} \, \text{J} \cdot \text{s}$  
+- $f$ là tần số của ánh sáng và được tính thông qua công thức ($c$ là tốc độ ánh sáng trong chân không $c = 3 \times 10^8 \, \text{m/s}$)  
 
-$$p \= m.v$$
+$$
+f = \frac{c}{\lambda}
+$$
+
+Giả thiết rằng tại mỗi thời điểm mỗi electron chỉ hấp thụ một photon và hiệu ứng quang điện sẽ xảy ra gần như ngay lập tức và không có độ trễ đáng kể (điều này nhằm giải thích việc khi tăng cường độ ánh sáng hay số lượng photon sẽ không làm hiệu ứng quang điện xảy ra). Bạn đọc có thể tham khảo thêm về giá thuyết về Lượng tử ánh sáng tại ([Light - Photons, Wavelengths, Quanta | Britannica](https://www.britannica.com/science/light/Quantum-theory-of-light)).
+
+Lý thuyết của Einstein về Lượng tử ánh sáng là một cơ sở vững chắc về việc ánh sáng mang tính chất của hạt (tính xác định trong không gian - spatial determinacy, có động lượng $p$ - momentum).
+
+### Sóng vật chất
+<br />
+Hai quan điểm trên về tính chất của ánh sáng đã tồn tại song song trong một khoảng thời gian dài cho đến khi nhà vật lý học người Pháp Louis de Broglie (1892 - 1987) đưa ra giả thiết về “Sóng vật chất” (1924, ý tưởng của ông bắt đầu từ việc nếu ánh sáng vừa có tính chất hạt vừa có tính chất sóng thì các hạt vật chất (đã xác định tính chất hạt như electron, proton,...) có mang tính chất của sóng luôn không, và dựa trên các thí nghiệm đo đạc ông đã đưa ra giả thiết về “Sóng vật chất” của mọi hạt vật chất. Điều này có nghĩa rằng không chỉ ánh sáng, mà các hạt vật chất khác (có khối lượng) như electron, proton, neutron,... hay thậm chí là tôi, bạn hay mọi vật chất tồn tại trong vũ trụ đều có tính chất sóng. Đây là một trong những đột phá quan trọng và là giả thiết nền tảng cho cơ học lượng tử sau này (tham khảo chi tiết Giả thiết về sóng vật chất tại [BROGLIE.TEX](https://fondationlouisdebroglie.org/AFLB-classiques/aflb124p001.pdf)).
+
+Giả thiết của Broglie cho rằng mỗi hạt (hoặc chùm hạt) vật chất chuyển động với động lượng (momentum) $p$, tương đương với một sóng với bước sóng $\lambda$ lan truyền trong không gian, và mối liên hệ này được biểu diễn thông qua công thức:
+
+$$
+\lambda = \frac{h}{p}
+$$
+
+Trong đó:
+
+- $h$ là hằng số Planck.  
+- $\lambda$ là bước sóng.  
+- $p$ là động lượng của hạt với khối lượng $m$ và vận tốc $v$ được tính bằng công thức:
+
+$$
+p = m.v
+$$
 
 Có thể bạn vẫn còn nhớ thí nghiệm 2 khe mà tôi đã đề cập phía trên, tuy nhiên với giả thiết về sóng vật chất của Broglie, giờ chúng ta sẽ thực hiện một thí nghiệm tương tự nhưng với nguồn phát không phải là ánh sáng mà là một máy phát electron. Dưới đây là hình ảnh các electron trên màn chắn khi chúng ta tăng số lượng electron phát ra.
+
+<div align="center">
 
 ![][image3]
 
@@ -115,302 +144,396 @@ Có thể bạn vẫn còn nhớ thí nghiệm 2 khe mà tôi đã đề cập p
 
 *(Nguồn ảnh: [Quantum uncertainty. Double slit experiment performed by Dr. Tonomura... | Download Scientific Diagram](https://www.researchgate.net/figure/Quantum-uncertainty-Double-slit-experiment-performed-by-Dr-Tonomura-showing-the-build_fig4_339105748))*
 
+</div>
+
 Qua hình trên ta có thể thấy rằng việc bắn các electron qua 2 khe hẹp cũng mang lại các vân giao thoa tương tự như đối với ánh sáng. Đây là một bằng chứng quan trọng cho giả thiết về “Sóng vật chất” và cũng là một trong số những lý do mà vào năm 1929, Louis de Broglie được trao Giải Nobel Vật lý cho công trình nghiên cứu của ông về tính chất sóng của electron và các hạt vật chất khác.
 
 Từ đây ta có thể rút ra kết luận về lưỡng tính sóng hạt cho mọi hạt vật chất, vậy giờ chúng ta cần xây dựng một mô hình toán học cho sóng vật chất, vì vậy tôi sẽ điểm qua một vài kiến thức toán học cần thiết tại phần tiếp theo của bài viết.
 
-2. **Số phức và chuyển động quay.**
+## 2. Số phức và chuyển động quay
 
 Phần này chủ yếu nói về mô hình toán học sử dụng để xây dựng hàm sóng, bạn đọc không quan tâm về các khái niệm toán học hoặc đã có kiến thức về số phức có thể chuyển qua phần 3 về xây dựng sóng vật chất.
 
-**Số phức**
+### 2.1. Số phức
 
-**![][image4]**
+<div align="center">
 
-*(Nguồn: [Hình học của số phức \- Góc nhìn vật lý \- VẬT LÝ KỸ THUẬT](https://ipt.hcmute.edu.vn/2016/09/hinh-hoc-cua-so-phuc/))*
+![][image4]
+
+*(Nguồn: [Hình học của số phức - Góc nhìn vật lý - VẬT LÝ KỸ THUẬT](https://ipt.hcmute.edu.vn/2016/09/hinh-hoc-cua-so-phuc/))*
+
+</div>
 
 Bạn đọc ở đây hẳn đã làm quen với số phức tại chương trình toán học cấp 3 và đại học (trong đại số tuyến tính), vì vậy ở đây tôi sẽ chỉ nhắc lại khái niệm và ý nghĩa, cũng như ứng dụng của số phức khi dùng để mô tả chuyển động quay (tròn đều).
 
 Trước khi vào các khái niệm toán học, tôi muốn giới thiệu sơ qua về lịch sử hình thành số phức. Trong chương trình phổ thông, chúng ta đã dần quen với khái niệm bình phương của một số luôn là một số dương, vậy có nghĩa rằng chúng ta chỉ có thể tìm được một số nếu bình phương của chúng lớn hơn 0, còn các số có bình phương là một số âm thì sao? Cùng lược qua một vài cột mốc lịch sử về sự phát triển của số phức trước khi bắt đầu các khái niệm.
 
-### **Thời kỳ đầu**
+### Thời kỳ đầu
+<br />
 
 * **Thế kỷ thứ 1**: Các nhà toán học Ấn Độ như Bhaskara Acharya đã đề xuất rằng căn bậc hai của một số âm không tồn tại.  
 * **Thế kỷ 9**: Al-Khwarizmi, một nhà toán học Ả Rập, đã giải các phương trình bậc hai nhưng chỉ giới hạn ở các giá trị dương.
 
-### **Thế kỷ 16**
+### Thế kỷ 16
+<br />
 
 * **1545**: Hieronymus Cardano xuất bản cuốn sách "Ars Magna" nơi mà anh ta đã giải được phương trình bậc ba và đưa ra các giải phương trình chứa căn bậc hai của số âm.  
 * **1572**: Rafael Bombelli đã viết về các số phức trong cuốn sách của mình, đặt nền móng cho việc sử dụng số phức trong toán học.
 
-### **Thế kỷ 17**
+### Thế kỷ 17
+<br />
 
 * **1647**: René Descartes sử dụng thuật ngữ "số ảo" để chỉ căn bậc hai của số âm.  
 * **1707**: Leonhard Euler đã đưa ra công thức Euler's identity, một trong những định lý quan trọng nhất trong toán học.
 
-### **Thế kỷ 18 và 19**
+### Thế kỷ 18 và 19
+<br />
 
 * **1799**: Caspar Wessel và Robert Argand đã phát triển đồ thị Argand, giúp biểu diễn số phức trên một tọa độ đa chiều.  
 * **1805**: William Rowan Hamilton phát minh ra tọa độ tuyến tính của số phức trong không gian ba chiều, gọi là số phức Hamilton.
 
-### **Thế kỷ 20 và sau**
+### Thế kỷ 20 và sau
+<br />
 
 * **Sự phát triển tiếp**: Số phức đã trở thành công cụ quan trọng trong nhiều lĩnh vực của toán học và khoa học, từ định lý toán học đến các ứng dụng trong kỹ thuật điện tử và vật lý.
 
-1. **Định nghĩa.**
+### A. Định nghĩa
 
-Số phức là một số có dạng: $$ z \= a \+ bj $$
+Số phức là một số có dạng: 
+
+$$ 
+z = a + bj 
+$$
 
 Trong đó:
 
-- $$ a,b $$ là các số thực.  
-- $$j$$ là đơn vị ảo với tính chất: $$j^2=-1$$
+- $a, b$ là các số thực.  
+- $j$ là đơn vị ảo với tính chất: $j^2 = -1$
 
-Trong toán học, đơn vị ảo thường được ký hiệu là $$i$$ tuy nhiên trong vật lý $$i$$ thường được dùng cho ký hiệu về cường độ dòng điện, vì vậy vật lý thường sử dụng ký hiệu $$j$$ cho đơn vị ảo, bạn đọc có thể sử dụng ký hiệu bất kỳ (trong các bài tiếp theo, tôi sẽ sử dụng $$i$$ để biểu diễn cho đơn vị ảo để phù hợp kiến thức phổ thông).
+Trong toán học, đơn vị ảo thường được ký hiệu là $i$ tuy nhiên trong vật lý $i$ thường được dùng cho ký hiệu về cường độ dòng điện, vì vậy vật lý thường sử dụng ký hiệu $j$ cho đơn vị ảo, bạn đọc có thể sử dụng ký hiệu bất kỳ (trong các bài tiếp theo, tôi sẽ sử dụng $i$ để biểu diễn cho đơn vị ảo để phù hợp kiến thức phổ thông).
 
-2. **Phần thực và phần ảo.**
+### B. Phần thực và phần ảo
+<br />
 
-**Phần thực** ($$a$$): Phần không chứa đơn vị ảo $$i$$ của số phức.
+**Phần thực** ($a$): Phần không chứa đơn vị ảo $i$ của số phức.
 
-**Phần ảo** ($$bi$$): Phần chứa đơn vị ảo $$i$$ của số phức.
+**Phần ảo** ($bi$): Phần chứa đơn vị ảo $i$ của số phức.
 
-3. **Biểu diễn số phức.**
+### C. Biểu diễn số phức
+<br />
+
+<div align="center">
 
 ![][image5]
 
 *(Hình 1.4. Biểu diễn số phức)*
 
-Số phức không chỉ mang ý nghĩa đại số mà con mang ý nghĩa hình học rất quan trọng (tôi sẽ trình bày về ý nghĩa của đơn vị ảo $$i$$ trong phần tiếp theo), vì vậy chúng ta sẽ biểu diễn số phức $$Z1$$ *(Hình 1.4)* trên một mặt phẳng tọa độ với 2 chiều (1 chiều cho phần thực và 1 chiều cho phần ảo).
+</div>
+
+Số phức không chỉ mang ý nghĩa đại số mà con mang ý nghĩa hình học rất quan trọng (tôi sẽ trình bày về ý nghĩa của đơn vị ảo $i$ trong phần tiếp theo), vì vậy chúng ta sẽ biểu diễn số phức $Z1$ *(Hình 1.4)* trên một mặt phẳng tọa độ với 2 chiều (1 chiều cho phần thực và 1 chiều cho phần ảo).
 
 **Dạng đại số**
 
-Giả sử chúng ta bắt đầu tại gốc tọa độ, làm cách nào chúng ta có thể xác định được số phức $$Z1 \= 2+3i$$ trên mặt phẳng tọa độ này?. Chúng ta có thể di chuyển theo trục thực 2 đơn vị, sau đó tiếp tục di chuyển theo trục ảo 3 đơn vị là sẽ tìm được vị trí của $$Z1$$, bạn đọc có thể sẽ nhận ra rằng, đây chính là ý nghĩa của vector (Vector trong Tiếng Latin có nghĩa là “Người vận chuyển” hay “Người mang”).  
+Giả sử chúng ta bắt đầu tại gốc tọa độ, làm cách nào chúng ta có thể xác định được số phức $Z1 = 2+3i$ trên mặt phẳng tọa độ này?. Chúng ta có thể di chuyển theo trục thực 2 đơn vị, sau đó tiếp tục di chuyển theo trục ảo 3 đơn vị là sẽ tìm được vị trí của $Z1$, bạn đọc có thể sẽ nhận ra rằng, đây chính là ý nghĩa của vector (Vector trong Tiếng Latin có nghĩa là “Người vận chuyển” hay “Người mang”).  
 Vậy chúng ta có thể biểu diễn một số phức thông qua một vector (mà vector chính là một trong những đối tượng nghiên cứu chính của đại số tuyến tính), vì vậy chúng ta sẽ có dạng biểu diễn đại số của một số phức như trong định nghĩa nêu phía trên:
 
-$$z \= a \+ bi \\tag{2.1}$$
+$$
+z = a + bi \tag{2.1}
+$$
 
 **Dạng cực**
 
 Tuy dạng đại số của số phức có thể biểu diễn số phức một cách đơn giản, nhưng các tính toán trên số phức với dạng đại số này thường gặp rất nhiều khó khăn (như khi tính số phức với mũ bậc cao). Vì vậy sau đây tôi sẽ giới thiệu cách một cách biểu diễn khác của số phức thường xuất hiện trong vật lý.
 
-Theo quan sát của số phức $$Z1$$ *(Hình 1.4),* chúng ta thấy rằng để biểu diễn số phức $$Z1$$, chúng ta chỉ cần biết độ dài của vector $$\\vec{Z}$$ và góc $$\\theta$$ của vector này với trục hoành (thực). Vậy chúng ta có thể biểu diễn số phức dưới dạng cực:
+Theo quan sát của số phức $Z1$ *(Hình 1.4),* chúng ta thấy rằng để biểu diễn số phức $Z1$, chúng ta chỉ cần biết độ dài của vector $\vec{Z}$ và góc $\theta$ của vector này với trục hoành (thực). Vậy chúng ta có thể biểu diễn số phức dưới dạng cực:
 
-$$z \= r (\\cos \\theta \+ i \\sin \\theta) \\tag{2.2}$$  
+$$
+z = r (\cos \theta + i \sin \theta) \tag{2.2}
+$$ 
+
 Trong đó:
 
-- $$r$$ là modulus (chiều dài) của số phức và có thể được tính bằng công thức:  
-  $$ r=\\sqrt{a^2+b^2} \\tag{2.3}$$   
-- *$$\\theta$$* là góc tạo bởi số phức $$z$$ và trục hoành, tính bằng:
+- $r$ là modulus (chiều dài) của số phức và có thể được tính bằng công thức:  
 
-$$ \\theta \= \\tan^{-1} \\left( \\frac{b}{a} \\right) \\tag{2.4}$$  
+$$
+r = \sqrt{a^2+b^2} \tag{2.3}
+$$ 
+
+- *$\theta$* là góc tạo bởi số phức $z$ và trục hoành, tính bằng:
+
+$$
+\theta = \tan^{-1} \left( \frac{b}{a} \right) \tag{2.4}
+$$ 
+
 *(với a,b là phần thực, ảo trong biểu diễn đại số)*
 
-Ta có thể dễ dàng nhận thấy $$a \=r.cos \\theta$$ và $$b \= r.sin \\theta$$ tương đương với cách biểu diễn đại số của nó.
+Ta có thể dễ dàng nhận thấy $a = r \cos \theta$ và $b = r \sin \theta$ tương đương với cách biểu diễn đại số của nó.
 
 **Dạng mũ**
 
 Dạng cực của số phức mặc dù có thể đơn giản hóa các tính toán, nhưng trong vật lý lượng tử chúng ta lại thường sử dụng dạng mũ của số phức, bằng cách áp dụng công thức Euler:
 
-$$e^{i \\theta} \= \\cos \\theta \+ i \\sin \\theta \\tag{2.5}$$
+$$
+e^{i \theta} = \cos \theta + i \sin \theta \tag{2.5}
+$$
 
-Ta có thể biểu diễn số phức $$z$$ dưới dạng:
+Ta có thể biểu diễn số phức $z$ dưới dạng:
 
-$$ z \= r (\\cos \\theta \+ i \\sin \\theta) \= r e^{i \\theta} \\tag{2.6}$$
+$$
+z = r (\cos \theta + i \sin \theta) = r e^{i \theta} \tag{2.6}
+$$
 
-4. **Ý nghĩa của đơn vị ảo $$i$$**
+### D. Ý nghĩa của đơn vị ảo $i$
+<br />
 
-Chúng ta đã nhắc lại khá nhiều các định nghĩa và phép toán trong số phức, nhưng tôi lại chưa thực sự nói về ý nghĩa của đơn vị ảo $$i$$ là gì. Vậy chúng ta cùng quay lại với câu hỏi mở đầu của phần số phức, làm sao để tìm được một số có bình phương âm?
+Chúng ta đã nhắc lại khá nhiều các định nghĩa và phép toán trong số phức, nhưng tôi lại chưa thực sự nói về ý nghĩa của đơn vị ảo $i$ là gì. Vậy chúng ta cùng quay lại với câu hỏi mở đầu của phần số phức, làm sao để tìm được một số có bình phương âm?
 
-Quay trở lại với cách biểu diễn số phức trên mặt phẳng tọa độ, ta bắt đầu với một số phức $$z \= 1+0i$$ hay số thực 1, vậy làm sao để biến số thực nói trên thành \-1. Chúng ta hãy thử bắt đầu với cách nhân số phức $$z$$ với đơn vị ảo $$i$$ đến biến $$z$$ thành $$z1=i(1+0i)=1i+0i^2 \= 0+1i$$, sau đó tiếp tục nhân số phức $$z1$$ này với đơn vị ảo $$i$$ và ta được số phức $$z2 \= i(0+1i) \=0i+1i^2 \= \-1+ 0i$$ hay số thực \-1. Ta có thể biểu diễn quá trình trên như hình dưới:
+Quay trở lại với cách biểu diễn số phức trên mặt phẳng tọa độ, ta bắt đầu với một số phức $z = 1+0i$ hay số thực 1, vậy làm sao để biến số thực nói trên thành -1. Chúng ta hãy thử bắt đầu với cách nhân số phức $z$ với đơn vị ảo $i$ đến biến $z$ thành $z1 = i(1+0i) = 1i+0i^2 = 0+1i$, sau đó tiếp tục nhân số phức $z1$ này với đơn vị ảo $i$ và ta được số phức $z2 = i(0+1i) = 0i+1i^2 = -1+ 0i$ hay số thực -1. Ta có thể biểu diễn quá trình trên như hình dưới:
 
-![][image6]  
-*(Hình 1.5. Toán tử quay $$i$$)*  
-*(Nguồn: [Hình học của số phức \- Góc nhìn vật lý \- VẬT LÝ KỸ THUẬT](https://ipt.hcmute.edu.vn/2016/09/hinh-hoc-cua-so-phuc/))*
 
-Chúng ta có thể thấy rằng, việc dùng đơn vị ảo $$i$$ tác động lên số thực 1, đơn giản chỉ là một phép quay 90 độ của số thực 1 trong mặt phẳng phức, cho nên ý nghĩa của đơn vị ảo $$i$$ chính là **phép quay 90 độ** (người ta thường gọi đơn vị ảo $$i$$ là toán tử quay). Vậy việc tác động 2 lần toán tử quay $$i$$ (hay $$i^2$$) lên số thực 1 chính là việc quay 180 độ số thực 1 trên mặt phẳng phức và thu được kết quả là \-1.
-
-Chính vì tính chất quay của toán tử $$i$$ nên nó được sử dụng rất nhiều trong vật lý về các dao động điều hòa hay mô tả chuyển động tròn đều. Vậy chúng ta cùng đến với một ứng dụng của số phức trong việc mô tả chuyển động tròn đều.
-
-5. **Hàm liên hợp**
+### E. Hàm liên hợp
+<br />
 
 **Hàm liên hợp** (complex conjugate) của một hàm số phức là một hàm số trong đó phần ảo của mỗi giá trị của hàm số đó được đổi dấu.
 
-Giả sử chúng ta có một hàm số phức $$f(z)$$, trong đó $$z$$ là một biến phức $$z=x+iy$$ (với $$x$$ và $$y$$ là các số thực, và $$i$$ là đơn vị ảo, $$i^2=-1$$). Hàm số $$f(z)$$ có thể được biểu diễn dưới dạng phần thực và phần ảo:
+Giả sử chúng ta có một hàm số phức $f(z)$, trong đó $z$ là một biến phức $z=x+iy$ (với $x$ và $y$ là các số thực, và $i$ là đơn vị ảo, $i^2=-1$). Hàm số $f(z)$ có thể được biểu diễn dưới dạng phần thực và phần ảo:
 
-$$f(z)=u(x,y)+iv(x,y) \\tag{2.7}$$
+$$
+f(z) = u(x,y) + iv(x,y) \tag{2.7}
+$$
 
-Trong đó $$u(x,y)$$ và $$v(x,y)$$ lần lượt là phần thực và phần ảo của $$f(z)$$, khi đó hàm liên hợp của hàm số $$f(z)$$ là hàm số có dạng:
+Trong đó $u(x,y)$ và $v(x,y)$ lần lượt là phần thực và phần ảo của $f(z)$, khi đó hàm liên hợp của hàm số $f(z)$ là hàm số có dạng:
 
-$$f(z)^{\*}=u(x,y)-iv(x,y) \\tag{2.8}$$
+$$
+f(z)^* = u(x,y) - iv(x,y) \tag{2.8}
+$$
 
 Tính chất quan trọng nhất của hàm liên hợp đó là khi nhân một hàm số phức với hàm liên hợp của nó, kết quả sẽ luôn là một hàm số thực không âm.
 
-Ví dụ: Tìm hàm liên hợp của hàm số $$f(z) \= z+iz$$ với $$z$$ là một số phức có dạng $$z=x+iy$$.
+Ví dụ: Tìm hàm liên hợp của hàm số $f(z) = z+iz$ với $z$ là một số phức có dạng $z=x+iy$.
 
 Giải:
 
-Thay $$z \= x+iy$$ vào $$f(z)$$ ta được:
+Thay $z = x+iy$ vào $f(z)$ ta được:
 
-$$f(z)=z+iz=(x+iy)+i(x+iy) \= (x-y)+i(x+y) \\tag{2.9}$$
+$$
+f(z) = z+iz = (x+iy)+i(x+iy) = (x-y)+i(x+y) \tag{2.9}
+$$
 
-Bằng cách đổi dấu phần ảo của $$(2.9)$$ ta thu được hàm liên hợp của $$f(z)$$ có dạng:
+Bằng cách đổi dấu phần ảo của $(2.9)$ ta thu được hàm liên hợp của $f(z)$ có dạng:
 
-$$f(z)^{\*} \= (x-y) \- i(x+y) \\tag{2.10}$$
+$$
+f(z)^* = (x-y) - i(x+y) \tag{2.10}
+$$
 
-**Chuyển động tròn đều**
+### 2.2. Chuyển động tròn đều
 
 Nhắc lại về chuyển động tròn đều, chuyển động tròn đều là chuyển động của một vật thể trên một đường tròn với tốc độ góc không đổi. Điều này có nghĩa là vật thể di chuyển quanh đường tròn với một vận tốc đều đặn, giữ nguyên khoảng cách từ tâm của đường tròn và không thay đổi tốc độ của chuyển động. 
 
-Ta xét chuyển động tròn đều của chất điểm B với bán kính $$r$$ và tốc độ góc là $$\\omega$$ dưới đây:
+Ta xét chuyển động tròn đều của chất điểm B với bán kính $r$ và tốc độ góc là $\omega$ dưới đây:
 
-**![][image7]**  
+<div align="center">
+
+![][image7]
+
 *(Hình 1.6. Chuyển động tròn đều)*
+
+</div>
 
 Vậy để miêu tả tọa độ của chất điểm trên trục hoành theo thời gian, ta có thể viết:
 
-$$x \= r (\\cos \\omega.t \+ i \\sin \\omega.t) \= r e^{i \\omega.t} \\tag{2.7}$$  
+$$
+x = r (\cos \omega t + i \sin \omega t) = r e^{i \omega t} \tag{2.7}
+$$ 
+
 Trong đó:
 
-- $$i$$ là toán tử quay 90 độ.
+- $i$ là toán tử quay 90 độ.
 
-Bạn đọc có thể thắc mắc về việc nếu như chỉ cần mô tả tọa độ của chất điểm trên trục hoành, vậy ta chỉ cần sử dụng công thức $$x=r.\\cos (\\omega.t) $$ là đủ, tại sao lại cần thành phần “ảo” $$r.i.\\sin( \\omega.t) $$ để làm gì? Tôi sẽ nói về ý nghĩa vật lý của nó.
+<br />
 
-Như các bạn đã biết trong chương trình vật lý phổ thông, phương trình $$x=A.\\cos(2\\pi ft)$$ thường được dùng để mô tả một chất điểm dao động điều hòa với tần số ,$$f$$ và biên độ $$A$$ theo trục $$x$$ (ở đây tôi lược bỏ pha ban đầu $$\\omega 0$$ để công thức đơn giản hơn), ví dụ như chuyển động dọc theo phương Ox của con lắc lò xo.   
-![][image8]  
-(Nguồn:https://hocthatgioi.com/con-lac-lo-xo-nam-ngang-cach-viet-phuong-trinh-dao-dong-va-bai-tap-ap-dung/)
+Bạn đọc có thể thắc mắc về việc nếu như chỉ cần mô tả tọa độ của chất điểm trên trục hoành, vậy ta chỉ cần sử dụng công thức $x=r\cos (\omega t)$ là đủ, tại sao lại cần thành phần “ảo” $ri\sin(\omega t)$ để làm gì? Tôi sẽ nói về ý nghĩa vật lý của nó.
 
-Tuy nhiên nếu suy nghĩ cẩn thận hơn, chúng ta sẽ nhận ra rằng mọi dao động điều hòa trong không gian thực đều tương đương một chuyển động tròn đều trong không gian phức, tuy nhiên chiều ảo (chiều của toán tử quay $$i$$ tác động lên chất điểm)  không được thể hiện trong không gian 3 chiều của chúng ta, nên về quan sát chúng ta chỉ nhìn thấy hình chiếu của nó trên không gian thực (trục $$x$$). Đó là lý do chúng ta cần sử dụng thành phần $$ri \\sin(\\omega t)$$ để thể hiện rằng chất điểm rằng vẫn đang quay trong một không gian phức nào đó.
+Như các bạn đã biết trong chương trình vật lý phổ thông, phương trình $x=A\cos(2\pi ft)$ thường được dùng để mô tả một chất điểm dao động điều hòa với tần số $f$ và biên độ $A$ theo trục $x$ (ở đây tôi lược bỏ pha ban đầu $\omega_0$ để công thức đơn giản hơn), ví dụ như chuyển động dọc theo phương Ox của con lắc lò xo.  
 
-Ví dụ trong dao động điều hòa của con lắc lò xo, nếu ta coi thế năng (năng lượng dự trữ trong lò xo khi nó bị nén hoặc kéo dãn khỏi vị trí cân bằng) và động năng (năng lượng có được khi chuyển động) là 2 trục chính thì việc con lắc lò xo dao động xung quanh điểm cân bằng cũng tương đương với việc một chất điểm chuyển động tròn đều trong không gian với 2 trục động năng và thế năng. Động năng và thế năng của con lắc tại một thời điểm luôn thay đổi nhưng tổng năng lượng của hệ thì không đổi. Trong ví dụ trên, nếu chúng ta chỉ quan tâm đến vị trí (hay vận tốc do vận tốc là đạo hàm của vị trí theo thời gian) thì thành phần $$r\\cos (\\omega t)$$ chỉ thể hiện được một khía cạnh của con lắc (động năng), mà không thể hiện được khía cạnh còn lại (thế năng) nếu không sử dụng thành phần $$ri \\sin (\\omega t)$$.
+<div align="center">
 
-3. **Xây dựng hàm sóng.**
+![][image8]
+
+*(Nguồn: [Học Thật Giỏi - Con lắc lò xo nằm ngang](https://hocthatgioi.com/con-lac-lo-xo-nam-ngang-cach-viet-phuong-trinh-dao-dong-va-bai-tap-ap-dung/))*
+
+</div>
+
+Tuy nhiên nếu suy nghĩ cẩn thận hơn, chúng ta sẽ nhận ra rằng mọi dao động điều hòa trong không gian thực đều tương đương một chuyển động tròn đều trong không gian phức, tuy nhiên chiều ảo (chiều của toán tử quay $i$ tác động lên chất điểm) không được thể hiện trong không gian 3 chiều của chúng ta, nên về quan sát chúng ta chỉ nhìn thấy hình chiếu của nó trên không gian thực (trục $x$). Đó là lý do chúng ta cần sử dụng thành phần $ri \sin(\omega t)$ để thể hiện rằng chất điểm rằng vẫn đang quay trong một không gian phức nào đó.
+
+Ví dụ trong dao động điều hòa của con lắc lò xo, nếu ta coi thế năng (năng lượng dự trữ trong lò xo khi nó bị nén hoặc kéo dãn khỏi vị trí cân bằng) và động năng (năng lượng có được khi chuyển động) là 2 trục chính thì việc con lắc lò xo dao động xung quanh điểm cân bằng cũng tương đương với việc một chất điểm chuyển động tròn đều trong không gian với 2 trục động năng và thế năng. Động năng và thế năng của con lắc tại một thời điểm luôn thay đổi nhưng tổng năng lượng của hệ thì không đổi. Trong ví dụ trên, nếu chúng ta chỉ quan tâm đến vị trí (hay vận tốc do vận tốc là đạo hàm của vị trí theo thời gian) thì thành phần $r\cos (\omega t)$ chỉ thể hiện được một khía cạnh của con lắc (động năng), mà không thể hiện được khía cạnh còn lại (thế năng) nếu không sử dụng thành phần $ri \sin (\omega t)$.
+
+## 3. Xây dựng hàm sóng
 
 Chúng ta đã đi qua các nội dung cần thiết để xây dựng hàm sóng, giờ chúng ta sẽ liệt kê lại các giả thiết ban đầu và các vấn đề khi xây dựng hàm sóng của một chất điểm.
 
-**Giả thiết**
+### A. Giả thiết
 
-Dựa trên tính chất sóng và hạt của ánh sáng (photon), Broglie đã giả thiết rằng các hạt thông thường khác (electron, proton,...) cũng sẽ mang tính chất sóng. Theo lý thuyết của Broglie cho rằng một chùm hạt chuyển động cùng hướng với cùng vận tốc $$v$$ sẽ tương đương với một sóng hình sin lan truyền trong không gian (theo trục Ox). Vậy dạng tổng quát của hàm sóng sẽ có dạng:
+Dựa trên tính chất sóng và hạt của ánh sáng (photon), Broglie đã giả thiết rằng các hạt thông thường khác (electron, proton,...) cũng sẽ mang tính chất sóng. Theo lý thuyết của Broglie cho rằng một chùm hạt chuyển động cùng hướng với cùng vận tốc $v$ sẽ tương đương với một sóng hình sin lan truyền trong không gian (theo trục Ox). Vậy dạng tổng quát của hàm sóng sẽ có dạng:
 
-$$\\Psi(\\mathbf{x}, t) \=A (\\cos(\\omega(x,t))+ i \\sin(\\omega(x,t))) \= Ae^{i\\omega(x,t)}, \\tag{3.1} $$
+$$
+\Psi(\mathbf{x}, t) = A (\cos(\Phi(x,t)) + i \sin(\Phi(x,t))) = Ae^{i\Phi(x,t)}, \tag{3.1}
+$$
 
 Đừng quá lo lắng nếu công thức trên trông có vẻ phức tạp, chúng ta sẽ cùng đi qua lần lượt từng thành phần của nó.
 
-1. $$\\Psi(\\mathbf{x}, t)$$ là cách ký hiệu hàm sóng phổ biến được dùng trong cơ học lượng tử, thành phần $$x,t$$ trong ký hiệu trên có nghĩa rằng hàm sóng sẽ phụ thuộc vào vị trí và thời gian.
+1. $\Psi(\mathbf{x}, t)$ là cách ký hiệu hàm sóng phổ biến được dùng trong cơ học lượng tử, thành phần $x,t$ trong ký hiệu trên có nghĩa rằng hàm sóng sẽ phụ thuộc vào vị trí và thời gian.
 
-2. Hai thành phần tiếp theo $$A (\\cos(\\omega(x,t)) \+ i \\sin(\\omega(x,t)))$$ và $$A e^{i\\omega(x,t)}$$ chỉ là 2 cách để mô tả dao động điều hòa của một chất điểm với pha $$\\omega (x,t) $$  và biên độ $$A$$ như tôi đã trình bày trong phần 2 (chuyển động quay).  
-     
-* Ở đây thành pha của chất điểm là một hàm số phụ thuộc vào $$x,t$$, tương tự như đối với sóng nước, khi sóng lan truyền trên mặt nước, nếu ta chỉ quan sát một phần tử nước dao động ta sẽ thấy rằng li độ (khoảng cách so với điểm cân bằng) của nó sẽ làm một hàm số phụ thuộc vào $$t$$, nhưng nếu ta xét tất cả các phân tử nước của sóng tại một thời điểm, ta sẽ thấy rằng li độ của chúng sẽ là một hàm số phụ thuộc vào vị trí $$x$$ của nó. Vì vậy pha của sóng sẽ phụ thuộc vào $$x,t$$.(bạn đọc có thể tham khảo video trực quan tại đây [Thí nghiệm tạo sóng mặt nước. Vật lí lớp 11 Chương trình 2018](https://www.youtube.com/watch?v=6pajVsNs3JQ)).
+2. Hai thành phần tiếp theo $A (\cos(\Phi(x,t)) + i \sin(\Phi(x,t)))$ và $A e^{i\Phi(x,t)}$ chỉ là 2 cách để mô tả dao động điều hòa của một chất điểm với pha $\Phi (x,t)$ và biên độ $A$ như tôi đã trình bày trong phần 2 (chuyển động quay).  
+      
+   * Ở đây thành pha của chất điểm là một hàm số phụ thuộc vào $x,t$, tương tự như đối với sóng nước, khi sóng lan truyền trên mặt nước, nếu ta chỉ quan sát một phần tử nước dao động ta sẽ thấy rằng li độ (khoảng cách so với điểm cân bằng) của nó sẽ làm một hàm số phụ thuộc vào $t$, nhưng nếu ta xét tất cả các phân tử nước của sóng tại một thời điểm, ta sẽ thấy rằng li độ của chúng sẽ là một hàm số phụ thuộc vào vị trí $x$ của nó. Vì vậy pha của sóng sẽ phụ thuộc vào $x,t$.(bạn đọc có thể tham khảo video trực quan tại đây [Thí nghiệm tạo sóng mặt nước. Vật lí lớp 11 Chương trình 2018](https://www.youtube.com/watch?v=6pajVsNs3JQ)).
 
+   * Đơn vị ảo $i$ xuất hiện trong công thức để thể hiện rằng ngoài việc dao động quanh trục Ox, chất điểm còn đang quay trong một không gian (với 1 trục ảo) như tôi đã để cập trong phần 2 về chuyển động quay. Chúng ta đã biết thì bản chất của ánh sáng là sự lan truyền của sóng điện từ (phương dao động của điện trường và từ trường vuông góc với nhau), vậy nếu ta coi phương dao động của điện trường là trục chính (thực) thì phương dao động của từ trường sẽ là trục phụ (ảo) và ngược lại.
 
-* Đơn vị ảo $$i$$ xuất hiện trong công thức để thể hiện rằng ngoài việc dao động quanh trục Ox, chất điểm còn đang quay trong một không gian (với 1 trục ảo) như tôi đã để cập trong phần 2 về chuyển động quay. Chúng ta đã biết thì bản chất của ánh sáng là sự lan truyền của sóng điện từ (phương dao động của điện trường và từ trường vuông góc với nhau), vậy nếu ta coi phương dao động của điện trường là trục chính (thực) thì phương dao động của từ trường sẽ là trục phụ (ảo) và ngược lại.
+<div align="center">
 
-![][image9]  
-*(Nguồn: [Sóng điện từ là gì? Đặc điểm và phân loại sóng điện từ \- Sửa Chữa Tủ Lạnh Chuyên Sâu Tại Hà Nội](https://suachuatulanh.edu.vn/song-dien-tu-1680915739/))*
+![][image9]
 
-**Lập luận**
+*(Nguồn: [Sóng điện từ là gì? Đặc điểm và phân loại sóng điện từ - Sửa Chữa Tủ Lạnh Chuyên Sâu Tại Hà Nội](https://suachuatulanh.edu.vn/song-dien-tu-1680915739/))*
 
-Vậy công việc còn lại của chúng ta chỉ là xác định dạng hàm của pha dao động $$\\omega(x,t)$$.
+</div>
 
-1. Như đã đề cập tại phần 1 về Giả thiết của Broglie rằng mỗi hạt (hoặc chùm hạt) vật chất chuyển động với động lượng (momentum) $$p$$, tương đương với một sóng với bước sóng $$\\lambda$$ lan truyền trong không gian, và mối liên hệ này được biểu diễn thông qua công thức:  
-   $$ \\lambda \= \\frac{h}{p} \\tag{3.2}$$  
-* Mà ta có động lượng của một chất điểm được xác định bằng công thức $$p \=mv$$ với $$m$$ là khối lượng của chất điểm và $$v$$ là vận tốc của chất điểm và $$h$$ là hằng số Planck. Vậy nếu biết được khối lượng ban đầu và vận tốc của chất điểm, ta hoàn toàn có thể xác định được bước sóng của nó.  
-* Tương tự như đối với sóng nước hay bất kỳ sóng nào khác, ta đều thấy rằng qua mỗi bước sóng $$\\lambda$$ thì mô hình sóng sẽ lặp lại (1 chu kỳ \- $$2\\pi$$). Vậy xét tất cả các điểm dao động tại thời điểm $$t0$$, ta thấy rằng pha của các điểm dao động sẽ là một hàm số phụ thuộc vào $$x$$ dạng:
+### B. Lập luận
 
-  $$\\omega (x,t\_0) \= 2\\pi \\frac{x}{\\lambda} \\tag{3.3}$$
+Vậy công việc còn lại của chúng ta chỉ là xác định dạng hàm của pha dao động $\Phi(x,t)$.
 
-  Ví dụ: bước sóng của 1 electron di chuyển với vận tốc 10km/s sẽ là 72.7nm (khối lượng của electron là $$m \\approx 9.109 \\times 10^{-31} \\, \\text{kg}$$), vậy pha dao động của electron tại điểm $$x$$ có tọa độ $$x \= 18.175$$ sẽ là $$2\\pi \\frac{18,175}{72,5} \\approx \\frac{\\pi}{2}$$.
+1. Như đã đề cập tại phần 1 về Giả thiết của Broglie rằng mỗi hạt (hoặc chùm hạt) vật chất chuyển động với động lượng (momentum) $p$, tương đương với một sóng với bước sóng $\lambda$ lan truyền trong không gian, và mối liên hệ này được biểu diễn thông qua công thức:  
 
-2. Mà như đã biết trong thuyết về lượng tử ánh sáng của Einstein ta có công thức *(1.1)* mô tả mối liên hệ giữa năng lượng $$(E)$$ và tần số $$(f)$$:
+$$
+\lambda = \frac{h}{p} \tag{3.2}
+$$
 
-   $$ E= hf, \\tag{3.4}$$
+* Mà ta có động lượng của một chất điểm được xác định bằng công thức $p = mv$ với $m$ là khối lượng của chất điểm và $v$ là vận tốc của chất điểm và $h$ là hằng số Planck. Vậy nếu biết được khối lượng ban đầu và vận tốc của chất điểm, ta hoàn toàn có thể xác định được bước sóng của nó.  
+* Tương tự như đối với sóng nước hay bất kỳ sóng nào khác, ta đều thấy rằng qua mỗi bước sóng $\lambda$ thì mô hình sóng sẽ lặp lại (1 chu kỳ - $2\pi$). Vậy xét tất cả các điểm dao động tại thời điểm $t_0$, ta thấy rằng pha của các điểm dao động sẽ là một hàm số phụ thuộc vào $x$ dạng:
 
-* Ta có năng lượng (động lượng) của một chất điểm với khối lượng $$(m)$$ và động lượng $$(p)$$ có dạng:
+$$
+\Phi (x,t_0) = 2\pi \frac{x}{\lambda} \tag{3.3}
+$$
 
-  $$E \= \\frac{p^2}{2m}, \\tag{3.5}$$
+  Ví dụ: bước sóng của 1 electron di chuyển với vận tốc 10km/s sẽ là 72.7nm (khối lượng của electron là $m \approx 9.109 \times 10^{-31} \, \text{kg}$), vậy pha dao động của electron tại điểm $x$ có tọa độ $x = 18.175$ sẽ là $2\pi \frac{18,175}{72,5} \approx \frac{\pi}{2}$.
 
-  *(Nên nhớ rằng năng lượng toàn phần sẽ bao gồm cả động năng $$(T)$$ và thế năng $$(V)$$, tuy nhiên ở đây chúng ta sẽ xét trường hợp thế năng bằng 0 tại mọi điểm)*
+2. Mà như đã biết trong thuyết về lượng tử ánh sáng của Einstein ta có công thức *(1.1)* mô tả mối liên hệ giữa năng lượng $(E)$ và tần số $(f)$:
 
-* Từ *(3.4), (3.5)* và với mối liên hệ giữa tần số và tốc độ góc $$\\omega \= 2 \\pi f$$, ta có:
+$$
+E = hf \tag{3.4}
+$$
 
-  $$\\omega \= \\frac{p^2}{2m} \\cdot \\frac{2\\pi}{h}, \\tag{3.6}$$
+* Ta có năng lượng (động lượng) của một chất điểm với khối lượng $(m)$ và động lượng $(p)$ có dạng:
 
-* Vậy xét dao động của chất điểm tại tọa độ $$x\_0$$, ta sẽ thu được pha của dao động tại điểm này là một hàm số phụ thuộc vào $$t$$:
+$$
+E = \frac{p^2}{2m} \tag{3.5}
+$$
 
-$$\\omega(x0,t) \= \\frac{p^2}{2m} \\cdot \\frac{2\\pi}{h}.t \\tag{3.7} $$
+  *(Nên nhớ rằng năng lượng toàn phần sẽ bao gồm cả động năng $(T)$ và thế năng $(V)$, tuy nhiên ở đây chúng ta sẽ xét trường hợp thế năng bằng 0 tại mọi điểm)*
 
-* Mà như ta đã biết, dấu của $$\\omega$$ sẽ quy định hướng lan truyền của sóng ($$\\omega \>0$$ thì sóng lan truyền ngược chiều với trục Ox và ngược lại).
+* Từ *(3.4), (3.5)* và với mối liên hệ giữa tần số và tốc độ góc $\omega = 2 \pi f$, ta có:
 
-**Kết quả**
+$$
+\omega = \frac{p^2}{2m} \cdot \frac{2\pi}{h} \tag{3.6}
+$$
 
-Vậy từ $$(3.3)$$ và $$(3.6)$$ và đặt $$k \= \\frac{2\\pi}{\\lambda}$$  và hằng số Planck rút gọn $$\\hbar \= \\frac{h}{2\\pi}$$ ta thu được pha tổng quát $$\\omega(x,t) \= (kx \- \\omega t)$$ (giả sử chất điểm chuyển động theo trục dương của Ox). Vậy phương trình (3.1) của một hạt (chất điểm) với khối lượng $$(m)$$ và động lượng $$(p)$$ di chuyển theo chiều dương của trục Ox trở thành:
+* Vậy xét dao động của chất điểm tại tọa độ $x_0$, ta sẽ thu được pha của dao động tại điểm này là một hàm số phụ thuộc vào $t$:
 
-$$\\Psi(\\mathbf{x}, t) \= A e^{i(\\mathbf{k} \\cdot \\mathbf{x} \- \\omega t)} \\tag{3.8}$$
+$$
+\Phi(x_0,t) = \frac{p^2}{2m} \cdot \frac{2\pi}{h}t \tag{3.7}
+$$
 
-Trong đó:
+* Mà như ta đã biết, dấu của $\omega$ sẽ quy định hướng lan truyền của sóng ($\omega > 0$ thì sóng lan truyền ngược chiều với trục Ox và ngược lại).
 
-- $$k=\\frac{2\\pi}{\\lambda} $$ được gọi là số sóng.  
-- $$\\lambda \=\\frac{h}{p}$$ là bước sóng.  
-- $$\\omega \= \\frac{p^2}{2m \\hbar}$$ là tốc độ góc.  
-- $$\\hbar \= \\frac{h}{2\\pi}$$ là hằng số Planck rút gọn.  
-- $$A$$ là biên độ dao động.  
-- $$i$$ là đơn vị ảo.
+### C. Kết quả
 
-Chúng ta thấy rằng bước sóng $$\\lambda$$ tỷ lệ nghịch với động lượng, mà động lượng lại tỷ lệ thuận với khối lượng, vì vậy chúng ta có thể thấy rằng các vật thể có khối lượng càng nhỏ, thì tính sóng của vật thể đó lại càng được thể hiện rõ như chúng ta đã đề cập ở phần mở đầu.
+Vậy từ $(3.3)$ và $(3.6)$ và đặt $k = \frac{2\pi}{\lambda}$ và hằng số Planck rút gọn $\hbar = \frac{h}{2\pi}$ ta thu được pha tổng quát $\Phi(x,t) = (kx - \omega t)$ (giả sử chất điểm chuyển động theo trục dương của Ox). Vậy phương trình (3.1) của một hạt (chất điểm) với khối lượng $(m)$ và động lượng $(p)$ di chuyển theo chiều dương của trục Ox trở thành:
 
-*(Ở đây tôi dùng lời giải cho một trường hợp rất cụ thể là hạt chuyển động tự do hay chỉ có động năng để dễ giải thích các khái niệm khi mô tả sóng Broglie, tuy nhiên trong các bài toán thực tế thường hạt hoặc hệ hạt sẽ nằm trong một trường thế $$(V)$$ nào đó, điều đó sẽ làm thay đổi công thức $$(3.5)$$ nhưng lập luận vẫn sẽ tương tự, khi đó tốc độ góc $$\\omega \=\\frac{E}{\\hbar}$$ và số sóng $$k  \= \\sqrt{\\frac{2m(E \- V)}{\\hbar^2}}$$ với $$E \= T+V \= \\frac{p^2}{2m} \+V$$)*
-
-**Ý nghĩa của hàm sóng**
-
-Từ đầu đến giờ chúng ta đã nói qua rất nhiều về hàm sóng, nhưng chúng ta chưa nói về ý nghĩa của hàm sóng thực sự là gì. Trước khi đi vào vấn đề, tôi muốn chúng ta xem xét một ví dụ tương tự đó chính là sóng biển. Chúng ta sẽ thấy rằng biên độ sóng càng cao thì chúng càng mang nhiều năng lượng (hãy tưởng tượng đến sức mạnh của các cơn sóng thần). Dựa trên ý tưởng đó, nhà vật lý học người Đức Max Born (1888 \- 1970\) vào năm 1926 đã đưa ra diễn giải về ý nghĩa của hàm sóng chính là **mật độ xác suất** tìm thấy chất điểm trong không gian. Vậy tại sao lại là xác suất tìm thấy hạt?
-
-Ở phần trên chúng ta thấy rằng hàm sóng được xây dựng trên các phương trình năng lượng $$(3.4)$$, trong cơ học cổ điển chúng ta đã biết rằng, năng lượng của sóng phụ thuộc vào bình phương biên độ sóng tại điểm đó, mà năng lượng $$E$$ của chúng ta thì không đổi, vậy không phải hàm sóng thực chất chỉ là một biểu đồ mô tả phân bố năng lượng của chất điểm hay sao, điều đó giải thích tại sao tại các điểm có biên độ sóng cao thì xác suất tìm thấy chất điểm sẽ lớn. Dĩ nhiên bạn đọc có quyền nghi ngờ diễn giải này, tuy nhiên rất nhiều thí nghiệm thực tế về sau đều ủng hộ diễn giải trên (Các thí nghiệm tại các trung tâm hạt nhân học đã đo lường các phân bố xác suất của các hạt cơ bản như proton, neutron và electron trong các phản ứng hạt nhân. Các kết quả thực tế đã phù hợp với các dự đoán của lý thuyết phân bố xác suất của Max Born).
-
-Tuy nhiên chúng ta nên nhớ rằng trong hàm sóng có chứa bao gồm đơn vị ảo $$i$$ (hay sự điều chuyển qua lại giữa các dạng năng lượng như năng lượng điện và năng lượng từ của photon), vậy để rút ra được biên độ xác suất tại một điểm, chúng ta cần tính modulus của hàm sóng $$(2.3)$$ tại điểm đó hay $$|\\Psi(x)|^2$$ hay:
-
-$$|\\Psi(x)|^2 \= \\Psi(x)^{\*}\\Psi(x) \\tag{3.9}$$
+$$
+\Psi(\mathbf{x}, t) = A e^{i(\mathbf{k} \cdot \mathbf{x} - \omega t)} \tag{3.8}
+$$
 
 Trong đó:
 
-- $$\\Psi(x)$$ là hàm sóng.  
-- $$\\Psi(x)^{\*} $$ là hàm sóng liên hợp (để đảm bảo phép nhân liên hợp luôn cho ra một số thực). Như tôi đã trình bày trong phần 2 về hàm liên hợp của một hàm số thì nếu chúng ta biểu diễn hàm sóng dưới dạng cực $$(2.2)$$ hay $$\\Psi(x) \= A(cos(\\omega) \+ i sin(\\omega))$$ thì **hàm liên hợp (complex conjugate)** của hàm sóng sẽ có dạng $$\\Psi(x)^{\*} \= A(cos(\\omega) \- i sin(\\omega))$$.
+- $k = \frac{2\pi}{\lambda}$ được gọi là số sóng.  
+- $\lambda = \frac{h}{p}$ là bước sóng.  
+- $\omega = \frac{p^2}{2m \hbar}$ là tốc độ góc.  
+- $\hbar = \frac{h}{2\pi}$ là hằng số Planck rút gọn.  
+- $A$ là biên độ dao động.  
+- $i$ là đơn vị ảo.
 
-*Chú ý: ở đây chúng ta dùng $$|\\Psi(x)|^2$$ thay vì $$|\\Psi(x)|$$ vì năng lượng của sóng tỷ lệ với bình phương biên độ (tương tự như trong vật lý cổ điển).*
+<br />
+
+Chúng ta thấy rằng bước sóng $\lambda$ tỷ lệ nghịch với động lượng, mà động lượng lại tỷ lệ thuận với khối lượng, vì vậy chúng ta có thể thấy rằng các vật thể có khối lượng càng nhỏ, thì tính sóng của vật thể đó lại càng được thể hiện rõ như chúng ta đã đề cập ở phần mở đầu.
+
+*(Ở đây tôi dùng lời giải cho một trường hợp rất cụ thể là hạt chuyển động tự do hay chỉ có động năng để dễ giải thích các khái niệm khi mô tả sóng Broglie, tuy nhiên trong các bài toán thực tế thường hạt hoặc hệ hạt sẽ nằm trong một trường thế $(V)$ nào đó, điều đó sẽ làm thay đổi công thức $(3.5)$ nhưng lập luận vẫn sẽ tương tự, khi đó tốc độ góc $\omega =\frac{E}{\hbar}$ và số sóng $k = \sqrt{\frac{2m(E - V)}{\hbar^2}}$ với $E = T+V = \frac{p^2}{2m} +V)$*
+
+### D. Ý nghĩa của hàm sóng
+
+Từ đầu đến giờ chúng ta đã nói qua rất nhiều về hàm sóng, nhưng chúng ta chưa nói về ý nghĩa của hàm sóng thực sự là gì. Trước khi đi vào vấn đề, tôi muốn chúng ta xem xét một ví dụ tương tự đó chính là sóng biển. Chúng ta sẽ thấy rằng biên độ sóng càng cao thì chúng càng mang nhiều năng lượng (hãy tưởng tượng đến sức mạnh của các cơn sóng thần). Dựa trên ý tưởng đó, nhà vật lý học người Đức Max Born (1888 - 1970) vào năm 1926 đã đưa ra diễn giải về ý nghĩa của hàm sóng chính là **mật độ xác suất** tìm thấy chất điểm trong không gian. Vậy tại sao lại là xác suất tìm thấy hạt?
+
+Ở phần trên chúng ta thấy rằng hàm sóng được xây dựng trên các phương trình năng lượng $(3.4)$, trong cơ học cổ điển chúng ta đã biết rằng, năng lượng của sóng phụ thuộc vào bình phương biên độ sóng tại điểm đó, mà năng lượng $E$ của chúng ta thì không đổi, vậy không phải hàm sóng thực chất chỉ là một biểu đồ mô tả phân bố năng lượng của chất điểm hay sao, điều đó giải thích tại sao tại các điểm có biên độ sóng cao thì xác suất tìm thấy chất điểm sẽ lớn. Dĩ nhiên bạn đọc có quyền nghi ngờ diễn giải này, tuy nhiên rất nhiều thí nghiệm thực tế về sau đều ủng hộ diễn giải trên (Các thí nghiệm tại các trung tâm hạt nhân học đã đo lường các phân bố xác suất của các hạt cơ bản như proton, neutron và electron trong các phản ứng hạt nhân. Các kết quả thực tế đã phù hợp với các dự đoán của lý thuyết phân bố xác suất của Max Born).
+
+Tuy nhiên chúng ta nên nhớ rằng trong hàm sóng có chứa bao gồm đơn vị ảo $i$ (hay sự điều chuyển qua lại giữa các dạng năng lượng như năng lượng điện và năng lượng từ của photon), vậy để rút ra được biên độ xác suất tại một điểm, chúng ta cần tính modulus của hàm sóng $(2.3)$ tại điểm đó hay $|\Psi(x)|^2$ hay:
+
+$$
+|\Psi(x)|^2 = \Psi(x)^*\Psi(x) \tag{3.9}
+$$
+
+Trong đó:
+
+- $\Psi(x)$ là hàm sóng.  
+- $\Psi(x)^*$ là hàm sóng liên hợp (để đảm bảo phép nhân liên hợp luôn cho ra một số thực). Như tôi đã trình bày trong phần 2 về hàm liên hợp của một hàm số thì nếu chúng ta biểu diễn hàm sóng dưới dạng cực $(2.2)$ hay $\Psi(x) = A(\cos(\omega) + i \sin(\omega))$ thì **hàm liên hợp (complex conjugate)** của hàm sóng sẽ có dạng $\Psi(x)^* = A(\cos(\omega) - i \sin(\omega))$.
+
+*Chú ý: ở đây chúng ta dùng $|\Psi(x)|^2$ thay vì $|\Psi(x)|$ vì năng lượng của sóng tỷ lệ với bình phương biên độ (tương tự như trong vật lý cổ điển).*
 
 Vậy ta có thể coi phân bố xác suất trên là một biến ngẫu nhiên liên tục có dạng:
 
-$$P(x)=|\\Psi(x)|^2 \\tag{3.10}$$
+$$
+P(x)=|\Psi(x)|^2 \tag{3.10}
+$$
+
+<div align="center">
 
 ![][image10]
 
 *(Hình 3.1: Biểu đồ mô tả mật độ xác suất của hàm sóng)*
 
-Và nếu chúng ta chúng ta còn nhớ về biến ngẫu nhiên liên tục thì có thể dễ dàng tính được xác suất tìm thấy hạt trong khoảng $$a$$ đến $$b$$ bằng:
+</div>
 
-$$\\int\_{a}^{b} |\\Psi(x)|^2 \\, dx \\tag{3.11}$$
+Và nếu chúng ta chúng ta còn nhớ về biến ngẫu nhiên liên tục thì có thể dễ dàng tính được xác suất tìm thấy hạt trong khoảng $a$ đến $b$ bằng:
+
+$$
+\int_{a}^{b} |\Psi(x)|^2 \, dx \tag{3.11}
+$$
 
 Xác suất tìm thấy hạt trên toàn bộ không gian phải bằng 1 hay:
 
-$$\\int\_{-\\infty}^{\\infty} |\\Psi(x)|^2 \\, dx \= 1 \\tag{3.12}$$
+$$
+\int_{-\infty}^{\infty} |\Psi(x)|^2 \, dx = 1 \tag{3.12}
+$$
 
-Trong các bài sau chúng ta sẽ dùng công thức $$(3.12)$$ để chuẩn hóa hàm sóng (tìm biên độ $$A$$ để xác suất tìm thấy hạt trên toàn bộ không gian bằng 1).
-
-4. **Tổng quan**
+Trong các bài sau chúng ta sẽ dùng công thức $(3.12)$ để chuẩn hóa hàm sóng (tìm biên độ $A$ để xác suất tìm thấy hạt trên toàn bộ không gian bằng 1).
+## 4. Tổng quan
 
 Ở bài này chúng ta đã đi qua tổng quan về lịch sử phát triển của cơ học lượng tử và các ý tưởng cơ bản (nhưng rất quan trọng trong cơ học lượng tử) khi xây dựng hàm sóng. Trong bài tiếp theo tôi sẽ giới thiệu một nội dung rất quan trọng khác của cơ học lượng tử đó là về “Phương trình Schrodinger”. Bài viết có thể hơi dài (mặc dù tôi đã cố gắng tóm gọn nhất có thể), tuy nhiên mọi tòa nhà chọc trời đều được xây dựng từ những viên gạch nhỏ, ta cần phải nắm vững các kiến thức cơ bản cho các bài học phía sau.   
 Cảm ơn bạn đọc đã dành thời gian đọc.
 
-5. **Tài liệu tham khảo.**
+## 5. Tài liệu tham khảo
 
-**Tiếng Việt:**
+### Tiếng Việt:
+<br />
 
-1. [Vướng lượng tử: từ tranh luận triết học đến giải Nobel năm 2022 \- VinBigdata \- Blog](https://blog.vinbigdata.org/vuong-luong-tu-tu-tranh-luan-triet-hoc-den-giai-nobel-nam-2022/)  
+1. [Vướng lượng tử: từ tranh luận triết học đến giải Nobel năm 2022 - VinBigdata - Blog](https://blog.vinbigdata.org/vuong-luong-tu-tu-tranh-luan-triet-hoc-den-giai-nobel-nam-2022/)  
 2. [Lịch sử của lý thuyết nguyên tử dẫn đến cơ học lượng tử](https://www.greelane.com/vi/khoa-h%E1%BB%8Dc-c%C3%B4ng-ngh%E1%BB%87-to%C3%A1n/khoa-h%E1%BB%8Dc/history-of-atomic-theory-4129185/)  
 3. [Cơ học lượng tử – Wikipedia tiếng Việt](https://vi.wikipedia.org/wiki/C%C6%A1_h%E1%BB%8Dc_l%C6%B0%E1%BB%A3ng_t%E1%BB%AD)
 
-**Tiếng Anh:**
+### Tiếng Anh:
+<br />
 
 1. [Quantum mechanics | Definition, Development, & Equations | Britannica](https://www.britannica.com/science/quantum-mechanics-physics)  
-2. [History of quantum mechanics \- Wikipedia](https://en.wikipedia.org/wiki/History_of_quantum_mechanics)
+2. [History of quantum mechanics - Wikipedia](https://en.wikipedia.org/wiki/History_of_quantum_mechanics)
+
 
 [image1]: <data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASAAAADCCAYAAADpeB+9AAAy5UlEQVR4Xu3dedxm9fw/8P4vNCmUJaURI0mRyBqyZUSWBiPRZFASJQyG0SZraTKEopA1u2GSJLKUsY6sWbPv+9b5Pp6fx+8zv+N0nes657rv+1zXueb9ejzO477v676us13n8/q836/38tmqCPQO11xzTbF8+fJi6623brRtu+22xVlnnVXdTSAwcWxVfSEw/fjWt75VPOIRjygWL15cHHroocXKlSuHbgho7dq11d0EAhNHEFAPkQno8Y9/fLF+/fpiw4YNxYc//OHa7QY3uEHxrGc9q7qbQGDiCALqIcoE9I53vOM6hFPdgoAC04ogoB4iCCgwKwgC6iGCgAKzgiCgHiIIKDArCALqIYKAArOCIKAeIggoMCsIAuohgoACs4IgoB4iCCgwKwgC6iGCgAKzgiCgHiIIKDArCALqIYKAArOCIKAeIggoMCsIAuohgoACs4IgoB4iCCgwKwgC6iGCgAKzgiCgHiIIKDArCALqIYKAArOCIKAeIggoMCsIAuohgoACs4IgoB4iCCgwKwgC6iGCgAKzgiCgHiIIKDArCALqIYKAArOCIKAeIggoMCsIAuoI1157bfWlhP/+97/VlxK8XveZcQjo+OOPr+4mEJg4goA6wL///e/i6quvLn7/+9//D6kgmW9+85vF3//+99K7i+Ivf/lLIplf/OIX//N6RlsC2n777YvTTz89Hedf//pXLekFAl0jCKgDfPe73y0e+chHFq973euKP/3pT5tfv+aaa4rb3e52xcc+9rHNryGrz3zmM8UDH/jA4n3ve9/m18toS0D77LNPsXz58uLNb35zOtbXvva14sc//nHxq1/9qvjDH/6QiGmhSek///lP8be//S0RYCCQEQTUAb74xS8Wd77znYvXvOY1/0NAiGDrrbdecAK64x3vWNz85jcvlixZUtzmNrcp7nOf+xT3ve99iyc/+cnF6tWr0z6+/OUvF9///vcTKSGK+SQkpOOc3/Oe9xRf//rXq/8ObMEIAuoAkyYgVhYN6NOf/nR6/1ve8pbiRS96UbLKWEd77bVXsd9++xX3u9/9iuOOO644//zziyuvvDJZSb/+9a/nZLUgs8suu6w44ogj0jWVrzUQCALqAJMmoG233bZ4xSteUd1N8de//rW44oor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>
 

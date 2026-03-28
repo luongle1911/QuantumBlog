@@ -1,8 +1,8 @@
 ---
 title: "Giới thiệu về công nghệ lượng tử"
 description: "Giới thiệu về công nghệ lượng tử."
-pubDate: "Mar 27 2026"
-heroImage: "../../assets/blog-placeholder-about.jpg"
+pubDate: "Mar 25 2026"
+heroImage: "../../assets/gioi-thieu-cong-nghe-luong-tu.jpg"
 tags: ["Vật lý lượng tử", "Giới thiệu", "Introduction"]
 ---
 

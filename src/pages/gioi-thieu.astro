@@ -1,86 +1,186 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="vi">
 	<head>
-		<BaseHead title={`Giới thiệu | ${SITE_TITLE}`} description="Giới thiệu vài nét về Tác giả, Mục tiêu lập Blog và Công nghệ sử dụng." />
+		<BaseHead
+			title={`Giới thiệu | ${SITE_TITLE}`}
+			description="Giới thiệu vài nét về Tác giả, Mục tiêu lập Blog và Công nghệ sử dụng."
+		/>
 	</head>
 	<body>
 		<Header />
-		
-		<main class="container" style="padding: 4rem 1.5rem; min-height: 75vh; max-width: 800px; margin: 0 auto;">
-			<h1 class="gradient-text" style="font-size: 2.8rem; margin-bottom: 3rem; text-align: center;">Giới thiệu</h1>
-			
-			<article class="glass-card" style="padding: 3rem 4rem; line-height: 1.8; color: var(--text-main);">
-				
+
+		<main
+			class="container"
+			style="padding: 4rem 1.5rem; min-height: 75vh; max-width: 800px; margin: 0 auto;"
+		>
+			<h1
+				class="gradient-text"
+				style="font-size: 2.8rem; margin-bottom: 3rem; text-align: center;"
+			>
+				Giới thiệu
+			</h1>
+
+			<article
+				class="glass-card"
+				style="padding: 3rem 4rem; line-height: 1.8; color: var(--text-main);"
+			>
 				<!-- Phần về tác giả -->
 				<section style="margin-bottom: 3rem;">
-					<h2 style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;">
-						<span style="font-size: 1.6rem;">👨‍💻</span> Vài nét về Tác giả
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">👨‍💻</span> Vài nét về Tác
+						giả
 					</h2>
 					<p style="margin-bottom: 1.2rem;">
-						Chào bạn, mình là một lập trình viên yêu thích sự kết hợp giữa <strong>Khoa học Kỹ thuật</strong> và <strong>Vật lý Tương lai</strong>. Đam mê với Cơ học lượng tử và sức mạnh của Điện toán lượng tử đã thúc đẩy mình xây dựng một không gian học thuật chuyên sâu.
+						Chào độc giả, mình là Lương, người đứng sau những bài
+						viết tại QuantumBlog. Với xuất phát điểm từ khối ngành
+						Toán học và Vật lý, mình đã sớm bị cuốn hút bởi những
+						khả năng vô tận của Điện toán Lượng tử. Hiện tại, mình
+						dành phần lớn thời gian để nghiên cứu các thuật toán
+						lượng tử và ứng dụng của nó trong các lĩnh vực khác
+						nhau.
 					</p>
-					<p style="margin-bottom: 0;">
-						Mục tiêu là đơn giản hóa mọi rào cản khái niệm, giúp các bạn có cái nhìn cực kỳ sinh động về kỷ nguyên máy tính mới này thay vì chỉ dừng lại ở các phương trình trên trang giấy.
+					<p>
+						Những nội dung bạn đọc trên blog này được mình tổng hợp
+						và biên dịch chủ yếu từ các tài liệu học thuật quốc tế
+						độc lập. Nếu bạn phát hiện ra điểm nào chưa chính xác
+						hoặc có bất kỳ thắc mắc nào trong các bài viết, xin đừng
+						ngần ngại để lại bình luận.
+					</p>
+					<p>
+						Rất vui được kết nối và đồng hành cùng bạn trên hành
+						trình khám phá thế giới lượng tử!
 					</p>
 				</section>
-                
-                <!-- Phần về Blog -->
+
+				<!-- Phần về Blog -->
 				<section style="margin-bottom: 3rem;">
-					<h2 style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;">
-						<span style="font-size: 1.6rem;">⚛️</span> Về Blog Lượng Tử Mở
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">⚛️</span> Về Blog Lượng Tử
 					</h2>
 					<p style="margin-bottom: 1.2rem;">
-						Đây không chỉ là nơi mình tự lưu trữ kiến thức mà còn là cầu nối cho sinh viên, kỹ sư, và những cá nhân khao khát đi trước thời đại. Nội dung chủ yếu:
+						Đây không chỉ là nơi mình tự lưu trữ kiến thức mà còn là
+						cầu nối cho sinh viên, kỹ sư, và những cá nhân khao khát
+						đi trước thời đại. Nội dung chủ yếu:
 					</p>
-					<ul style="margin-bottom: 0; padding-left: 1.5rem; color: var(--text-secondary);">
-						<li style="margin-bottom: 0.5rem;"><strong>Cơ bản:</strong> Nguyên lý chồng chập, Rối lượng tử (Quantum Entanglement).</li>
-						<li style="margin-bottom: 0.5rem;"><strong>Tính toán (Computing):</strong> Cổng logic lượng tử (Qubit), Thuật toán giảm lỗi, Phân phối khóa RSA.</li>
-						<li><strong>Học máy lượng tử (QML):</strong> Tối ưu AI với Machine Learning.</li>
+					<ul
+						style="margin-bottom: 0; padding-left: 1.5rem; color: var(--text-secondary);"
+					>
+						<li style="margin-bottom: 0.5rem;">
+							<strong>Cơ bản:</strong> Nguyên lý chồng chập, Rối lượng
+							tử (Quantum Entanglement).
+						</li>
+						<li style="margin-bottom: 0.5rem;">
+							<strong>Tính toán (Computing):</strong> Cổng logic lượng
+							tử (Qubit), Thuật toán giảm lỗi, Phân phối khóa RSA.
+						</li>
+						<li>
+							<strong>Học máy lượng tử (QML):</strong> Tối ưu AI với
+							Machine Learning.
+						</li>
 					</ul>
+					<div
+						style="background-color: #f6f8fa; border-left: 4px solid #0969da; padding: 12px 16px; margin-top: 20px; border-radius: 4px; color: #24292f; font-size: 0.95em;"
+					>
+						<strong>💡 Lưu ý nhỏ:</strong> Trong quá trình biên soạn các
+						bài viết, mình có sử dụng trí tuệ nhân tạo (AI) như một công
+						cụ hỗ trợ để tinh chỉnh văn phong (wording) và rà soát chéo
+						các công thức toán học. Dù vậy, ý tưởng cốt lõi, việc lựa
+						chọn tài liệu và tính chính xác của nội dung chuyên môn vẫn
+						do mình trực tiếp tổng hợp và kiểm duyệt.
+					</div>
 				</section>
 
 				<!-- Phần công nghệ -->
 				<section style="margin-bottom: 3rem;">
-					<h2 style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;">
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
 						<span style="font-size: 1.6rem;">🚀</span> Công nghệ sử dụng
 					</h2>
 					<p style="margin-bottom: 1.5rem;">
-						Blog được phát triển trên các hệ sinh thái và Open-source tối ưu hóa nhất nhằm đạt tốc độ tải trang chóng mặt và giao diện tối giản (Minimal & Glassmorphism):
+						Blog được phát triển trên các hệ sinh thái và
+						Open-source tối ưu hóa nhất nhằm đạt tốc độ tải trang
+						chóng mặt và giao diện tối giản (Minimal &
+						Glassmorphism):
 					</p>
 					<div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-						<span style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);">Astro Framework</span>
-						<span style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);">Vanilla CSS UI</span>
-						<span style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);">Rehype-KaTeX</span>
-						<span style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);">Github Deployment</span>
-                        <span style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);">Giscus Comments</span>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Astro Framework</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Vanilla CSS UI</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Rehype-KaTeX</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Github Deployment</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Giscus Comments</span
+						>
 					</div>
 				</section>
 
 				<!-- Liên hệ -->
 				<section>
-					<h2 style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;">
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
 						<span style="font-size: 1.6rem;">📫</span> Liên hệ Hợp tác
 					</h2>
 					<p style="margin-bottom: 1.2rem;">
-						Sẵn sàng chào đón các ý tưởng hay, chia sẻ tài liệu và những dự án liên quan đến Quantum Computing. Kết nối ngay:
+						Sẵn sàng chào đón các ý tưởng hay, chia sẻ tài liệu và
+						những dự án liên quan đến Quantum Computing. Kết nối
+						ngay:
 					</p>
-					<ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-						<li><span style="display: inline-block; width: 25px;">✉️</span> <strong>Email:</strong> <a href="mailto:admin@example.com" style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;">admin@example.com</a></li>
-						<li><span style="display: inline-block; width: 25px;">🐙</span> <strong>GitHub:</strong> <a href="https://github.com/luongle1911" target="_blank" style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;">github.com/luongle1911</a></li>
-						<li><span style="display: inline-block; width: 25px;">📘</span> <strong>LinkedIn:</strong> <a href="#" target="_blank" style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;">Kết nối Mạng lưới</a></li>
+					<ul
+						style="list-style: none; padding: 0; margin: 0; line-height: 2.2;"
+					>
+						<li>
+							<span style="display: inline-block; width: 25px;"
+								>✉️</span
+							>
+							<strong>Email:</strong>
+							<a
+								href="mailto:lephuluong1911@gmail.com"
+								style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;"
+								>lephuluong1911@gmail.com</a
+							>
+						</li>
+						<li>
+							<span style="display: inline-block; width: 25px;"
+								>🐙</span
+							>
+							<strong>GitHub:</strong>
+							<a
+								href="https://github.com/luongle1911"
+								target="_blank"
+								style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;"
+								>github.com/luongle1911</a
+							>
+						</li>
 					</ul>
 				</section>
-                
 			</article>
 		</main>
-		
+
 		<Footer />
 	</body>
 </html>
