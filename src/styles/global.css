@@ -516,3 +516,20 @@ ul.post-list li .date {
     transform: translateY(0);
   }
 }
+
+/* Math Equation Horizontal Scroll */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.5rem;
+  max-width: 100%;
+}
+
+.katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.katex-display::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
