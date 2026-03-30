@@ -1,7 +1,7 @@
 ---
 title: "Bài 2: Quantum Gate"
 description: "Tìm hiểu về các cổng lượng tử đơn và đa Qubit, ma trận đặc trưng và định lý không sao chép."
-pubDate: "Mar 29 2026"
+pubDate: "Mar 27 2026"
 heroImage: "../../assets/bai-2-quantum-gate.png"
 tags: ["Lượng tử", "Quantum Gate", "CNOT", "No-Cloning"]
 ---

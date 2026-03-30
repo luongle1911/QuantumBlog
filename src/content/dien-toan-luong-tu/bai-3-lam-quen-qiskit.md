@@ -1,7 +1,7 @@
 ---
 title: "Bài 3: Làm quen với Qiskit"
 description: "Hướng dẫn cơ bản về thư viện Qiskit: xây dựng mạch lượng tử với Terra và chạy mô phỏng với AerSimulator."
-pubDate: "Mar 30 2026"
+pubDate: "Mar 28 2026"
 heroImage: "../../assets/bai-3-lam-quen-qiskit.png"
 tags: ["Lượng tử", "Qiskit", "Terra", "Aer", "Python"]
 ---
