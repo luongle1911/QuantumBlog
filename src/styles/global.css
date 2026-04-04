@@ -533,3 +533,9 @@ ul.post-list li .date {
   background: var(--border-color);
   border-radius: 4px;
 }
+
+/* Fix KaTeX spacing inside justified paragraphs */
+.katex {
+  text-align: left !important;
+  white-space: nowrap !important;
+}

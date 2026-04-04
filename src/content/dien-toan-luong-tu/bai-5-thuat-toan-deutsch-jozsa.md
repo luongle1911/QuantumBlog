@@ -2,7 +2,7 @@
 title: "Bài 5: Thuật toán Deutsch-Jozsa"
 description: "Khám phá thuật toán Deutsch-Jozsa, trường hữu hạn F2, tính toán khả nghịch và hiện tượng Phase Kickback."
 pubDate: "Apr 01 2026"
-heroImage: "../../assets/blog-placeholder-about.jpg"
+heroImage: "../../assets/thuat-toan-dj.PNG"
 tags: ["Lượng tử", "Deutsch-Jozsa", "Phase Kickback", "Qiskit"]
 ---
 
@@ -346,7 +346,9 @@ Vì vậy việc sử dụng toán tử $(2.3)$ là bắt buộc để mô tả 
 
 Có thể hiểu $U_f$ là một hộp đen được thiết kế bằng các cổng lượng tử một cách phù hợp để mô tả hành vi của một hàm số $f(x)$ nào đó, nó nhận hai thanh ghi đầu vào $|x\rangle | y \rangle$ và trả về kết quả $|x \rangle, |y \oplus f(x) \rangle$.
 
-**Công thức Oracle:** $$
+#### Công thức Oracle
+
+$$
 U_f |x\rangle |y\rangle = |x\rangle |y \oplus f(x)\rangle \tag{2.5}
 $$
 
@@ -362,7 +364,7 @@ Với hàm số $f(x)$ ta đã định nghĩa:
 
 Toán tử $U_f$ tác động lên hệ thống gồm 3 qubit: 2 qubit đầu vào ($|x\rangle$) và 1 qubit đầu ra ($|y\rangle$). Ma trận đặc trưng của nó sẽ có kích thước $8 \times 8$ ($2^3 = 8$).
 
-**Phân tích các trạng thái cơ sở**
+#### Phân tích các trạng thái cơ sở
 
 Toán tử thực hiện phép biến đổi: $U_f |x\rangle |y\rangle = |x\rangle |y \oplus f(x)\rangle$.
 
@@ -376,7 +378,9 @@ Thứ tự các trạng thái cơ sở $|x_1 x_0 y\rangle$:
 7. $|110\rangle \xrightarrow{f(11)=1} |11, 0 \oplus 1\rangle = |111\rangle$ (Hoán đổi)  
 8. $|111\rangle \xrightarrow{f(11)=1} |11, 1 \oplus 1\rangle = |110\rangle$ (Hoán đổi)
 
-**Ma trận $U_f$ ($8 \times 8$)**
+<br />
+
+#### Ma trận $U_f$ ($8 \times 8$)
 
 Ma trận này gần giống với ma trận đơn vị, ngoại trừ khối $2 \times 2$ cuối cùng tương ứng với trạng thái $|110\rangle$ và $|111\rangle$ bị hoán đổi (tương tự cổng Pauli-X):
 
@@ -384,14 +388,12 @@ $$
 U_f = \begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \end{bmatrix}
 $$
 
-**Biểu diễn trên mạch**
+#### Biểu diễn trên mạch
 
 <div align="center">
 
 ![][image3]
-
-*(Hình 2.1. Biểu diễn mạch lượng tử của hàm số)*
-
+*(Hình 2.1. Biểu diễn mạch lượng tử của hàm số)* 
 </div>
 
 Và nếu các bạn để ý thì hàm số này chính là cổng Toffoli mà chúng ta đã học, hay nói cách khác mạch lượng tử của hàm số này có thể được thiết kế bằng một cổng Toffoli duy nhất.
@@ -452,10 +454,10 @@ $$
 Sau đó áp dụng CNOT:
 
 $$
-CNOT |\psi_{in}\rangle = \frac{1}{\sqrt{2}} \left( 1 \cdot |0\rangle|-\rangle + (-1) \cdot |1\rangle|-\rangle \right)
-$$
-$$
-= \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) \otimes |-\rangle = |-\rangle|-\rangle
+\begin{aligned}
+CNOT |\psi_{in}\rangle &= \frac{1}{\sqrt{2}} \left( 1 \cdot |0\rangle|-\rangle + (-1) \cdot |1\rangle|-\rangle \right) \\
+&= \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) \otimes |-\rangle = |-\rangle|-\rangle
+\end{aligned}
 $$
 
 Nếu bạn đọc để ý thì trạng thái của Qubit mục tiêu sau khi áp dụng CNOT không hề thay đổi (vẫn là $|- \rangle$) trong khi Qubit điều khiển lại bị đổi từ $|+ \rangle$ sang $|- \rangle$.
@@ -483,24 +485,30 @@ Chúng ta được đảm bảo rằng hàm $f$ chỉ có thể thuộc một tr
 * **Hàm hằng (Constant):** Kết quả của hàm luôn giống nhau cho mọi đầu vào. Nghĩa là tất cả đầu vào đều cho ra $0$, hoặc tất cả đều cho ra $1$.  
 * **Hàm cân bằng (Balanced):** Kết quả của hàm trả về $0$ cho đúng một nửa số lượng đầu vào khả thi, và trả về $1$ cho nửa còn lại.
 
-**Nhiệm vụ:** Xác định xem $f$ là **hằng** hay **cân bằng** bằng cách thực hiện ít lần gọi hàm (truy vấn) nhất có thể.
+> **Nhiệm vụ:** Xác định xem $f$ là **hằng** hay **cân bằng** bằng cách thực hiện ít lần gọi hàm (truy vấn) nhất có thể.
 
 Đầu tiên ta xem xét một hàm cân bằng và xem thuật toán cổ điển sẽ xử lý như thế nào.
 
 **Ví dụ 1:** Ta có đầu vào là một chuỗi 3 bit. Hộp đen của chúng ta sẽ trả về 1 nếu chuỗi ban đầu là số chẵn và 0 nếu chuỗi ban đầu là số lẻ.
 
-**Phân tích không gian đầu vào:** Với chuỗi 3 bit ($n = 3$), chúng ta có tổng cộng $2^3 = 8$ giá trị đầu vào khả thi trong hệ nhị phân, tương ứng với các số thập phân từ $0$ đến $7$:
+#### Phân tích không gian đầu vào
+
+Với chuỗi 3 bit ($n = 3$), chúng ta có tổng cộng $2^3 = 8$ giá trị đầu vào khả thi trong hệ nhị phân, tương ứng với các số thập phân từ $0$ đến $7$:
 
 * **Tập hợp đầu vào:** $S = \{000, 001, 010, 011, 100, 101, 110, 111\}$
 
-**Kiểm tra điều kiện cân bằng:** Một hàm số được gọi là cân bằng nếu số lượng đầu vào cho ra kết quả $0$ đúng bằng số lượng đầu vào cho ra kết quả $1$.
+#### Kiểm tra điều kiện cân bằng
+
+Một hàm số được gọi là cân bằng nếu số lượng đầu vào cho ra kết quả $0$ đúng bằng số lượng đầu vào cho ra kết quả $1$.
 
 * **Các số chẵn ($f(x) = 1$):** $\{0, 2, 4, 6\}$ $\rightarrow$ Có **4** giá trị.  
 * **Các số lẻ ($f(x) = 0$):** $\{1, 3, 5, 7\}$ $\rightarrow$ Có **4** giá trị.
 
 Vì số lượng kết quả $0$ ($4$) bằng số lượng kết quả $1$ ($4$), và mỗi nhóm chiếm đúng một nửa tổng số đầu vào ($4/8 = 50\%$), nên hàm số này thỏa mãn định nghĩa là một **hàm cân bằng**.
 
-**Cách tiếp cận cổ điển:** Ta sẽ phải kiểm tra ít nhất 5 số ($2^{3-1} + 1$). Ví dụ, nếu ta kiểm tra $0, 2, 4, 6$ và tất cả đều ra $1$, ta vẫn chưa biết chắc nó là hàm hằng (tất cả là $1$) hay hàm cân bằng. Ta buộc phải kiểm tra số thứ 5 (số $1$) để xác nhận.
+#### Cách tiếp cận cổ điển
+
+Ta sẽ phải kiểm tra ít nhất 5 số ($2^{3-1} + 1$). Ví dụ, nếu ta kiểm tra $0, 2, 4, 6$ và tất cả đều ra $1$, ta vẫn chưa biết chắc nó là hàm hằng (tất cả là $1$) hay hàm cân bằng. Ta buộc phải kiểm tra số thứ 5 (số $1$) để xác nhận.
 
 Nói chung để đưa ra kết luận chính xác về hàm số trong hộp đen thì ta cần truy vấn đến hộp đen ít nhất:
 
@@ -514,7 +522,9 @@ Tuy nhiên với máy tính lượng tử sử dụng thuật toán Deutsch-Jozs
 
 ### 4.2. Thuật toán
 
-* **Bước 0: Khởi tạo**
+#### Bước 0: Khởi tạo
+
+<br />
 
 Như đã đề cập phía trên, mỗi mạch lượng tử sẽ gồm 2 thanh ghi, một để lưu trữ $n$ Qubit đầu vào và một để lưu trữ kết quả. Trong thuật toán của chúng ta đầu ra chỉ có thể nhận một trong hai giá trị (0 hoặc 1) nên ta chỉ cần thêm 1 Qubit để lưu kết quả (gọi là Ancilla Qubit), vậy ta có thể viết trạng thái ban đầu của hệ thống như sau:
 
@@ -524,7 +534,9 @@ $$
 
 Trong đó ngoài Ancilla Qubit được đặt ở trạng thái $|1 \rangle$ thì tất cả Qubit còn lại được đặt ở trạng thái $|0 \rangle$.
 
-* **Bước 1: Tạo chồng chập**
+#### Bước 1: Tạo chồng chập
+
+<br />
 
 Áp dụng cổng Hadamard lên tất cả Qubit. Sau khi các Qubit đi qua các cổng $H$, $n$ qubit đầu trở thành sự chồng chập của tất cả $2^n$ trạng thái khả thi, còn qubit bổ trợ chuyển sang trạng thái $|-\rangle$:
 
@@ -532,7 +544,7 @@ $$
 |\psi_1\rangle = \left( \frac{1}{\sqrt{2^n}} \sum_{x \in \{0,1\}^n} |x\rangle \right) \otimes \left( \frac{|0\rangle - |1\rangle}{\sqrt{2}} \right) \tag{4.3}
 $$
 
-* **Bước 2: Truy vấn hộp đen ($U_f$)**
+#### Bước 2: Truy vấn hộp đen ($U_f$)
 
 Đây là phần quan trọng nhất. Oracle $U_f$ thực hiện phép biến đổi: $U_f |x\rangle |y\rangle = |x\rangle |y \oplus f(x)\rangle$. Khi qubit thứ hai ở trạng thái $|-\rangle$, ta có hiện tượng **Phase Kickback**:
 
@@ -547,7 +559,7 @@ $$
 |\psi_2\rangle = \frac{1}{\sqrt{2^n}} \sum_{x} (-1)^{f(x)} |x\rangle \otimes |-\rangle \tag{4.4}
 $$
 
-* **Bước 3: Áp dụng Hadamard lần hai**
+#### Bước 3: Áp dụng Hadamard lần hai
 
 Ở bước này ta chỉ áp dụng Hadamard lên $n$ Qubit đầu vào, nhưng trước hết chúng ta cần nghiên cứu về công thức tổng quát khi áp dụng Hadamard lên một trạng thái $|x \rangle$ sẽ có dạng như thế nào.
 
@@ -602,7 +614,7 @@ $$
 |\psi_3\rangle = \frac{1}{2^n} \sum_{z} \left( \sum_{x} (-1)^{f(x) + x \cdot z} \right) |z\rangle \tag{4.10}
 $$
 
-* **Bước 4: Đọc kết quả đo**
+#### Bước 4: Đọc kết quả đo
 
 Chúng ta chỉ quan tâm đến xác suất đo được chuỗi toàn số không: $|0\rangle^{\otimes n}$ (tức là $z = 0$).
 
@@ -614,13 +626,17 @@ $$
 
 Ở đây ta sẽ có hai trường hợp.
 
-**Trường hợp 1: $f(x)$ là hàm hằng (Constant)**
+#### Trường hợp 1: $f(x)$ là hàm hằng (Constant)
+
 - Nếu $f(x) = 0$ với mọi $x$, thì $C_0 = \frac{1}{2^n} \sum (1) = 1$.  
 - Nếu $f(x) = 1$ với mọi $x$, thì $C_0 = \frac{1}{2^n} \sum (-1) = -1$.
 
 **Kết luận:** Xác suất đo được $|0\rangle^{\otimes n}$ là $|C_0|^2 = 1$. Điều này có nghĩa là nếu máy đo hiện ra toàn số 0, hàm $f$ của chúng ta là hàm **hằng**.
 
-**Trường hợp 2: $f(x)$ là hàm cân bằng (Balanced)**
+#### Trường hợp 2: $f(x)$ là hàm cân bằng (Balanced)
+
+
+
 Vì $f(x)$ bằng 0 cho một nửa số $x$ và bằng 1 cho nửa còn lại, nên các số hạng $(-1)^0=1$ và $(-1)^1=-1$ trong tổng $\sum (-1)^{f(x)}$ sẽ triệt tiêu nhau hoàn toàn hay $C_0 = 0$.
 
 **Kết luận:** Xác suất đo được $|0\rangle^{\otimes n}$ bằng 0. Nếu máy hiện ra bất kỳ chuỗi nào khác (ít nhất một bit là 1), hàm là **cân bằng**.
