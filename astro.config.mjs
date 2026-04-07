@@ -16,7 +16,7 @@ export default defineConfig({
 		remarkPlugins: [remarkMath, remarkUnescapeMath],
 		rehypePlugins: [rehypeKatex],
 		shikiConfig: {
-			theme: 'github-light',
+			theme: 'github-dark',
 		}
 	},
 });
