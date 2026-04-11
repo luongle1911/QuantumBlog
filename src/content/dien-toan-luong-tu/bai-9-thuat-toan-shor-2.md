@@ -139,7 +139,7 @@ Chúng ta bỏ qua các bước 1, 2, 3 vì chúng ta đã nghiên cứu về ch
 
 ### **Sự thật về "Giao thoa tăng cường luôn cho góc là số nguyên"**
 
-Trong một thế giới lý tưởng, điều bạn nói là hoàn toàn chính xác. Nếu tỷ số $\frac{r y}{Q}$ là một số nguyên hoàn hảo, thì góc quay giữa các vector sẽ là một bội số chuẩn xác của $360^\circ$ ($2\pi$). Các vector sẽ nằm thẳng tắp, không có một chút sai lệch nào.
+Trong một thế giới lý tưởng, điều này là hoàn toàn chính xác. Nếu tỷ số $\frac{r y}{Q}$ là một số nguyên hoàn hảo, thì góc quay giữa các vector sẽ là một bội số chuẩn xác của $360^\circ$ ($2\pi$). Các vector sẽ nằm thẳng tắp, không có một chút sai lệch nào.
 
 Tuy nhiên, **trong thực tế, điều kiện lý tưởng này hầu như không bao giờ xảy ra.**
 
