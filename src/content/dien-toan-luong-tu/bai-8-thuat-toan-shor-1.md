@@ -1,7 +1,7 @@
 ---
 title: "Bài 8: Thuật toán Shor - Phần 1"
 description: "Tìm hiểu nền tảng của mật mã bất đối xứng (RSA, ECC) và lý do thuật toán lượng tử Shor lại là mối đe dọa lớn đối với an ninh mạng toàn cầu."
-pubDate: "Apr 07 2026"
+pubDate: "Apr 08 2026"
 heroImage: "../../assets/blog-placeholder-about.jpg"
 tags: ["Lượng tử", "Shor", "Cryptography"]
 ---
