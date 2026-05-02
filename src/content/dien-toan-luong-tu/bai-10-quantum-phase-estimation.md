@@ -1,7 +1,7 @@
 ---
 title: "Bài 10: Quantum Phase Estimation"
 description: "Khám phá thuật toán Ước lượng Pha Lượng tử (QPE) - 'động cơ' toán học đằng sau các thuật toán Shor và HHL."
-pubDate: "May 04 2026"
+pubDate: "Apr 25 2026"
 heroImage: "../../assets/blog-placeholder-about.jpg"
 tags: ["Lượng tử", "QPE", "Algorithm"]
 ---
@@ -292,11 +292,11 @@ Bởi vì $\Delta m$ là một số nguyên, tổng góc quay luôn là **chính
 
 Dưới đây là một mô phỏng tương tác giúp bạn đọc hình dung rõ hơn về cách các vector thay đổi dựa trên pha thực lượng tử và số lượng qubit.
 
-<iframe src="https://codesandbox.io/embed/ygxclc?view=preview"  
-     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"  
-     title="Quantum Blog Experiment"  
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"  
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" 
+<iframe 
+  src="https://ygxclc.csb.app" 
+  style="width: 100%; height: 550px; border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" 
+  title="Quantum Phase Estimation"
+  sandbox="allow-scripts allow-same-origin"
 ></iframe>
 
 ## 3. Ý nghĩa và ứng dụng
