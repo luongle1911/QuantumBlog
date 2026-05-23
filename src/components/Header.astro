@@ -1,5 +1,11 @@
 ---
 import Search from "./Search.astro";
+
+interface Props {
+  lang?: 'vi' | 'en';
+}
+const { lang = 'vi' } = Astro.props;
+const isEn = lang === 'en';
 ---
 
 <header class="glass-header">
@@ -14,23 +20,43 @@ import Search from "./Search.astro";
     </a>
     <div class="nav-links" style="display: flex; align-items: center;">
       <a
-        href="/QuantumBlog/"
+        href={isEn ? "/QuantumBlog/en/" : "/QuantumBlog/"}
         style="margin-right: 0.5rem; font-weight: 500; transition: color 0.2s;"
-        >Trang Chủ</a
+        >{isEn ? "Home" : "Trang Chủ"}</a
       >
       <a
-        href="/QuantumBlog/gioi-thieu/"
+        href={isEn ? "/QuantumBlog/en/gioi-thieu/" : "/QuantumBlog/gioi-thieu/"}
         style="margin-right: 1.5rem; font-weight: 500; transition: color 0.2s;"
-        >Giới thiệu</a
+        >{isEn ? "About" : "Giới thiệu"}</a
       >
       <div class="dropdown">
-        <button class="dropbtn">Chủ đề ▾</button>
+        <button class="dropbtn">{isEn ? "Topics ▾" : "Chủ đề ▾"}</button>
         <div class="dropdown-content">
-          <a href="/QuantumBlog/co-hoc-luong-tu/">⚛️ Cơ Học Lượng Tử</a>
-          <a href="/QuantumBlog/dien-toan-luong-tu/">💻 Điện Toán Lượng Tử</a>
+          <a href={isEn ? "/QuantumBlog/en/co-hoc-luong-tu/" : "/QuantumBlog/co-hoc-luong-tu/"}>⚛️ {isEn ? "Quantum Mechanics" : "Cơ Học Lượng Tử"}</a>
+          <a href={isEn ? "/QuantumBlog/en/dien-toan-luong-tu/" : "/QuantumBlog/dien-toan-luong-tu/"}>💻 {isEn ? "Quantum Computing" : "Điện Toán Lượng Tử"}</a>
+          <a href={isEn ? "/QuantumBlog/en/hoc-may-luong-tu/" : "/QuantumBlog/hoc-may-luong-tu/"}>🤖 {isEn ? "Quantum Machine Learning" : "Học Máy Lượng Tử"}</a>
         </div>
       </div>
-      <Search />
+      <Search lang={lang} />
+      
+      <button 
+        id="lang-toggle" 
+        style="margin-left: 1rem; padding: 0.3rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color); background: rgba(255,255,255,0.5); cursor: pointer; font-weight: bold; color: var(--text-main);"
+      >
+        {isEn ? "EN | vi" : "VI | en"}
+      </button>
+    </div>
     </div>
   </nav>
 </header>
+
+<script>
+  document.getElementById('lang-toggle')?.addEventListener('click', () => {
+    let path = window.location.pathname;
+    if (path.startsWith('/QuantumBlog/en/')) {
+      window.location.href = path.replace('/QuantumBlog/en/', '/QuantumBlog/');
+    } else {
+      window.location.href = path.replace('/QuantumBlog/', '/QuantumBlog/en/');
+    }
+  });
+</script>

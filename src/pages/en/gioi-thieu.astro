@@ -1,0 +1,159 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`About | ${SITE_TITLE}`}
+			description="Introduction to the Author, Blog objectives, and Technologies used."
+		/>
+	</head>
+	<body>
+		<Header lang="en" />
+
+		<main
+			class="container"
+			style="padding: 4rem 1.5rem; min-height: 75vh; max-width: 800px; margin: 0 auto;"
+		>
+			<h1
+				class="gradient-text"
+				style="font-size: 2.8rem; margin-bottom: 3rem; text-align: center;"
+			>
+				About
+			</h1>
+
+			<article
+				class="glass-card"
+				style="padding: 3rem 4rem; line-height: 1.8; color: var(--text-main);"
+			>
+				<!-- Phần về tác giả -->
+				<section style="margin-bottom: 3rem;">
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">👨‍💻</span> About the Author
+					</h2>
+					<p style="margin-bottom: 1.2rem;">
+						Hello readers, I am Lương, the person behind the articles here at QuantumBlog. Coming from a background in Mathematics and Physics, I was early fascinated by the endless possibilities of Quantum Computing. Currently, I spend most of my time researching quantum algorithms and their applications in various fields.
+					</p>
+					<p>
+						The contents you read on this blog are compiled and translated by me, primarily from independent international academic documents. If you spot any inaccuracies or have any questions about the articles, please don't hesitate to leave a comment.
+					</p>
+					<p>
+						It's a pleasure to connect and accompany you on the journey to explore the quantum world!
+					</p>
+				</section>
+
+				<!-- Phần về Blog -->
+				<section style="margin-bottom: 3rem;">
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">⚛️</span> About QuantumBlog
+					</h2>
+					<p style="margin-bottom: 1.2rem;">
+						This is not just a place where I store my knowledge, but also a bridge for students, engineers, and individuals eager to stay ahead of the times. Main contents include:
+					</p>
+					<ul
+						style="margin-bottom: 0; padding-left: 1.5rem; color: var(--text-secondary);"
+					>
+						<li style="margin-bottom: 0.5rem;">
+							<strong>Fundamentals:</strong> Principle of Superposition, Quantum Entanglement.
+						</li>
+						<li style="margin-bottom: 0.5rem;">
+							<strong>Computing:</strong> Quantum Logic Gates (Qubits), Error-Correction Algorithms, RSA Key Distribution.
+						</li>
+						<li>
+							<strong>Quantum Machine Learning (QML):</strong> AI Optimization with Machine Learning.
+						</li>
+					</ul>
+					<div
+						style="background-color: #f6f8fa; border-left: 4px solid #0969da; padding: 12px 16px; margin-top: 20px; border-radius: 4px; color: #24292f; font-size: 0.95em;"
+					>
+						<strong>💡 Note:</strong> During the writing process, I use Artificial Intelligence (AI) as an assisting tool to refine the wording and cross-check mathematical formulas. However, the core ideas, material selection, and professional accuracy are directly compiled and vetted by me.
+					</div>
+				</section>
+
+				<!-- Phần công nghệ -->
+				<section style="margin-bottom: 3rem;">
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">🚀</span> Technologies Used
+					</h2>
+					<p style="margin-bottom: 1.5rem;">
+						The blog is developed on highly optimized open-source ecosystems to achieve lightning-fast loading speeds and a minimal interface (Minimal & Glassmorphism):
+					</p>
+					<div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Astro Framework</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Vanilla CSS UI</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Rehype-KaTeX</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Github Deployment</span
+						>
+						<span
+							style="padding: 0.4rem 1rem; background: rgba(52,144,220,0.08); color: var(--primary); border-radius: 99px; font-size: 0.9rem; border: 1px solid var(--primary);"
+							>Giscus Comments</span
+						>
+					</div>
+				</section>
+
+				<!-- Liên hệ -->
+				<section>
+					<h2
+						style="color: var(--primary); margin-top: 0; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.8rem; border-bottom: 2px solid rgba(52,144,220,0.1); padding-bottom: 0.5rem;"
+					>
+						<span style="font-size: 1.6rem;">📫</span> Contact & Collab
+					</h2>
+					<p style="margin-bottom: 1.2rem;">
+						Always open to great ideas, material sharing, and projects related to Quantum Computing. Connect now:
+					</p>
+					<ul
+						style="list-style: none; padding: 0; margin: 0; line-height: 2.2;"
+					>
+						<li>
+							<span style="display: inline-block; width: 25px;"
+								>✉️</span
+							>
+							<strong>Email:</strong>
+							<a
+								href="mailto:lephuluong1911@gmail.com"
+								style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;"
+								>lephuluong1911@gmail.com</a
+							>
+						</li>
+						<li>
+							<span style="display: inline-block; width: 25px;"
+								>🐙</span
+							>
+							<strong>GitHub:</strong>
+							<a
+								href="https://github.com/luongle1911"
+								target="_blank"
+								style="color: var(--primary); text-decoration: none; border-bottom: 1px dashed var(--primary); transition: all 0.2s;"
+								>github.com/luongle1911</a
+							>
+						</li>
+					</ul>
+				</section>
+			</article>
+		</main>
+
+		<Footer />
+	</body>
+</html>

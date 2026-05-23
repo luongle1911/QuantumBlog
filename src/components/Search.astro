@@ -1,4 +1,9 @@
 ---
+interface Props {
+  lang?: 'vi' | 'en';
+}
+const { lang = 'vi' } = Astro.props;
+const isEn = lang === 'en';
 ---
 <div class="search-container">
   <div class="search-box glass-card">
@@ -6,7 +11,7 @@
       <circle cx="11" cy="11" r="8"></circle>
       <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
     </svg>
-    <input type="text" id="search-input" placeholder="Tìm kiếm bài viết, thẻ (tags)..." autocomplete="off" />
+    <input type="text" id="search-input" placeholder={isEn ? "Search posts, tags..." : "Tìm kiếm bài viết, thẻ (tags)..."} autocomplete="off" />
   </div>
   <div id="search-results" class="search-results glass-card hidden">
     <ul id="results-list"></ul>
@@ -127,7 +132,9 @@
   searchInput?.addEventListener('focus', async () => {
     if (searchData.length === 0) {
       try {
-        const response = await fetch('/QuantumBlog/search.json');
+        const isEn = window.location.pathname.startsWith('/QuantumBlog/en');
+        const searchUrl = isEn ? '/QuantumBlog/search-en.json' : '/QuantumBlog/search.json';
+        const response = await fetch(searchUrl);
         searchData = await response.json();
       } catch (error) {
         console.error('Error fetching search indices:', error);
@@ -163,7 +170,9 @@
         </li>
       `).join('');
     } else {
-      if (resultsList) resultsList.innerHTML = '<li class="no-results">Không tìm thấy bài viết nào</li>';
+      const isEn = window.location.pathname.startsWith('/QuantumBlog/en');
+      const noResultsText = isEn ? 'No results found' : 'Không tìm thấy bài viết nào';
+      if (resultsList) resultsList.innerHTML = `<li class="no-results">${noResultsText}</li>`;
     }
   });
 

@@ -12,6 +12,7 @@ type Props = CollectionEntry<"co-hoc-luong-tu">["data"] & {
     postIndex?: number;
     prevPost?: any;
     nextPost?: any;
+    lang?: 'vi' | 'en';
 };
 
 const {
@@ -26,7 +27,9 @@ const {
     postIndex,
     prevPost,
     nextPost,
+    lang = 'vi',
 } = Astro.props;
+const isEn = lang === 'en';
 ---
 
 <html lang="en">
@@ -64,13 +67,13 @@ const {
     </head>
 
     <body>
-        <Header />
+        <Header lang={lang} />
 
         <div class="layout-wrapper container-wide">
             {
                 posts && posts.length > 0 && (
                     <aside class="sidebar left-sidebar">
-                        <h3>Danh sách bài viết</h3>
+                        <h3>{isEn ? "Article List" : "Danh sách bài viết"}</h3>
                         <ul>
                             {posts.map((p: any, idx: number) => {
                                 const postSlug = p.id.replace(/\.[^/.]+$/, "");
@@ -114,7 +117,7 @@ const {
                                 {
                                     updatedDate && (
                                         <div class="last-updated-on">
-                                            Cập nhật lần cuối{" "}
+                                            {isEn ? "Last updated on" : "Cập nhật lần cuối"}{" "}
                                             <FormattedDate date={updatedDate} />
                                         </div>
                                     )
@@ -128,14 +131,14 @@ const {
                             <div class="post-navigation glass-card" style="display: flex; justify-content: space-between; margin-top: 3rem; padding: 1.5rem; gap: 1rem; border: 1px solid rgba(52, 144, 220, 0.2);">
                                 {prevPost ? (
                                     <a href={`/QuantumBlog/${collectionRoute}/${prevPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn prev" style="text-decoration: none; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
-                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">← Bài trước</div>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">{isEn ? "← Previous post" : "← Bài trước"}</div>
                                         <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{prevPost.data.title}</h4>
                                     </a>
                                 ) : <div style="flex: 1;"></div>}
                                 
                                 {nextPost ? (
                                     <a href={`/QuantumBlog/${collectionRoute}/${nextPost.id.replace(/\.[^/.]+$/, "")}/`} class="nav-btn next" style="text-decoration: none; text-align: right; flex: 1; padding: 1rem; border-radius: 8px; transition: background 0.2s; background: rgba(52, 144, 220, 0.03);">
-                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">Bài tiếp theo →</div>
+                                        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.3rem;">{isEn ? "Next post →" : "Bài tiếp theo →"}</div>
                                         <h4 style="margin: 0; color: var(--primary); font-size: 1.1rem; line-height: 1.4;">{nextPost.data.title}</h4>
                                     </a>
                                 ) : <div style="flex: 1;"></div>}
@@ -170,7 +173,7 @@ const {
                             class="comments-title"
                             style="margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--primary);"
                         >
-                            Bình luận
+                            {isEn ? "Comments" : "Bình luận"}
                         </h3>
 
                         <div class="giscus"></div>
@@ -195,28 +198,35 @@ const {
             </main>
 
             <aside class="sidebar right-sidebar">
-                <h3>Khám Phá Thêm</h3>
+                <h3>{isEn ? "Discover More" : "Khám Phá Thêm"}</h3>
                 <ul
                     class="category-links"
                     style="list-style: none; padding: 0;"
                 >
                     <li>
                         <a
-                            href="/QuantumBlog/co-hoc-luong-tu/"
+                            href={isEn ? "/QuantumBlog/en/co-hoc-luong-tu/" : "/QuantumBlog/co-hoc-luong-tu/"}
                             style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.75rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
-                            >⚛️ Cơ Học Lượng Tử</a
+                            >⚛️ {isEn ? "Quantum Mechanics" : "Cơ Học Lượng Tử"}</a
                         >
                     </li>
                     <li>
                         <a
-                            href="/QuantumBlog/dien-toan-luong-tu/"
+                            href={isEn ? "/QuantumBlog/en/dien-toan-luong-tu/" : "/QuantumBlog/dien-toan-luong-tu/"}
+                            style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.75rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
+                            >💻 {isEn ? "Quantum Computing" : "Điện Toán Lượng Tử"}</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href={isEn ? "/QuantumBlog/en/hoc-may-luong-tu/" : "/QuantumBlog/hoc-may-luong-tu/"}
                             style="padding: 0.75rem; display: block; background: var(--secondary); margin-bottom: 0.5rem; border-radius: 8px; font-weight: 500; color: var(--text-primary); text-decoration: none;"
-                            >💻 Điện Toán Lượng Tử</a
+                            >🤖 {isEn ? "Quantum ML" : "Học Máy Lượng Tử"}</a
                         >
                     </li>
                 </ul>
 
-                <h3 style="margin-top: 2.5rem;">Cộng Đồng</h3>
+                <h3 style="margin-top: 2.5rem;">{isEn ? "Community" : "Cộng Đồng"}</h3>
                 <a
                     href="#"
                     class="glass-card"
@@ -235,7 +245,7 @@ const {
                     </svg>
                     <span
                         style="font-weight: 600; color: #1877F2; font-size: 0.95rem;"
-                        >Fanpage Lượng Tử</span
+                        >{isEn ? "Quantum Fanpage" : "Fanpage Lượng Tử"}</span
                     >
                 </a>
             </aside>

@@ -1,0 +1,45 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header lang="en" />
+		
+		<main class="container hero-section">
+			<div class="hero-content">
+				<h1 class="gradient-text" style="color: var(--primary);">Explore Quantum Science</h1>
+				<p class="subtitle">A platform sharing in-depth research articles on Microphysics and Next-generation Computing Technologies.</p>
+				
+				<div class="card-grid">
+					<a href="/QuantumBlog/en/co-hoc-luong-tu/" class="glass-card link-card">
+						<h2 style="display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5em;">⚛️</span> Quantum Mechanics</h2>
+						<p>Archive of core principles, from the Schrödinger equation and quantum superposition to quantum entanglement.</p>
+						<span class="read-more">View articles →</span>
+					</a>
+					
+					<a href="/QuantumBlog/en/dien-toan-luong-tu/" class="glass-card link-card">
+						<h2 style="display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5em;">💻</span> Quantum Computing</h2>
+						<p>Quantum algorithms, quantum logic gates (Qubits), and breakthroughs beyond the limits of classical computing.</p>
+						<span class="read-more">View articles →</span>
+					</a>
+
+					<a href="/QuantumBlog/en/hoc-may-luong-tu/" class="glass-card link-card">
+						<h2 style="display: flex; align-items: center; gap: 0.5rem;"><span style="font-size: 1.5em;">🤖</span> Quantum Machine Learning</h2>
+						<p>The intersection of quantum mechanics and artificial intelligence, unlocking unprecedented optimization and model training potential.</p>
+						<span class="read-more">View articles →</span>
+					</a>
+				</div>
+			</div>
+		</main>
+		
+		<Footer />
+	</body>
+</html>
